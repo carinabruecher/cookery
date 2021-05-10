@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyDgOMc1RuUIRVDZE7Fsg9tdzHhRTeezftQ',
+    authDomain: 'cookery-b5ce5.firebaseapp.com',
+    projectId: 'cookery-b5ce5',
+    storageBucket: 'cookery-b5ce5.appspot.com',
+    messagingSenderId: '223027125251',
+    appId: '1:223027125251:web:46c6db609101780c758236',
+    measurementId: 'G-F80S4891JB'
+  }
 };
 
 /*
