@@ -1,1 +1,108 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+p {
+  color: white;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  text-align: center;
+
+  a{
+    color: white;
+    text-decoration: none;
+  }
+
+  span{
+    vertical-align: sub;
+  }
+}
+
+.container{
+  width: 100%;
+}
+
+header{
+  background-color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  text-align: center;
+
+  a{
+    color: white;
+    text-decoration: none;
+    object-position: center;
+
+    img{
+      width: 70%;
+    }
+  }
+
+  h1{
+    color: #FFAA00;
+    font-family: 'Handlee', cursive;
+  }
+
+  p{
+    font-family: 'Handlee', cursive;
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 414px;
+  margin: auto;
+}
+
+.flex-item-r {
+  background-color: #FFAA00;
+  margin: 15px;
+  padding: 20px 10px;
+  min-height: auto;
+  min-height: 70px;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+.flex-item-l{
+  background-color: #9CBE3F;
+  margin: 15px;
+  padding: 20px 10px;
+  min-height: auto;
+  min-height: 70px;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+.flex-item-p{
+  background-color: #77B5E3;
+  margin: 15px;
+  padding: 20px 10px;
+  min-height: auto;
+  min-height: 70px;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+.material-icons.md-48{
+  font-size: 48px;
+}
+
+.material-icons.md-light{
+  color: rgba(255, 255, 255, 1);
+}
+
+
+@media only screen and (max-width: 415px) {
+  .material-icons.md-36{
+    font-size: 36px;
+  }
+}
+
+
