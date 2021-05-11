@@ -1,9 +1,15 @@
-<input class="form-control" type="text" [(ngModel)]="item.name">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<header>
+  <div class="container">
+    <a href="" class="logo">
+      <h1>Wilkommen zurück!</h1>
+      <p>Cookery wünscht Dir viel Spaß beim Organisieren deines Küchen-Haushalts!</p>
+    </a>
+  </div>
+</header>
 
-<button (click)="save()">Save</button>
-
-<h2>List Documents</h2>
-
-<div *ngFor="let document of list | async">
-  {{document.name}}
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
+

@@ -10,10 +10,18 @@ import { environment } from '../environments/environment';
 // Firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { PlanComponent } from './plan/plan.component';
+import { ListComponent } from './list/list.component';
+import { RecepieComponent } from './recepie/recepie.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PlanComponent,
+    ListComponent,
+    RecepieComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
