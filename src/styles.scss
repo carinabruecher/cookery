@@ -7,6 +7,12 @@ $orange: #FFAA00;
 $green: #9CBE3F;
 $blue: #77B5E3;
 
+/* Hover */
+$orange-h: #f29b00;
+$green-h: #8ca338;
+$blue-h: #669dbf;
+
+
 
 p {
   color: white;
@@ -75,8 +81,11 @@ header{
   border-radius: 20px;
   justify-content: center;
 }
+.flex-item-r:hover {
+  background-color: $orange-h;
+}
 
-.flex-item-l{
+.flex-item-l {
   background-color: $green;
   margin: 15px;
   padding: 20px 10px;
@@ -84,9 +93,12 @@ header{
   min-height: 70px;
   border-radius: 20px;
   justify-content: center;
+  }
+.flex-item-l:hover {
+  background-color: $green-h;
 }
 
-.flex-item-p{
+.flex-item-p {
   background-color: $blue;
   margin: 15px;
   padding: 20px 10px;
@@ -94,6 +106,9 @@ header{
   min-height: 70px;
   border-radius: 20px;
   justify-content: center;
+}
+.flex-item-p:hover {
+  background-color: $blue-h;
 }
 
 .material-icons.md-48{
