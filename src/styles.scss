@@ -7,7 +7,7 @@ p {
 }
 
 body {
-  background-color: black;
+  background-color: black !important;
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -50,6 +50,7 @@ header{
 
   p{
     font-family: 'Handlee', cursive;
+    color: white;
   }
 }
 
@@ -98,6 +99,35 @@ header{
   color: rgba(255, 255, 255, 1);
 }
 
+.icon-white{
+  color: white;
+}
+
+.form-field {
+  margin-top: 20px;
+}
+
+input[type="text"]{
+  background-color : #2f2f2f;
+  border: none;
+}
+
+input[type="text"]::placeholder {
+  color: #bfbfbf;
+  padding-left: 25px
+}
+
+input[type="text"]:focus {
+  color: #bfbfbf;
+  background-color : #2f2f2f;
+}
+
+textarea[type="text"] {
+  background-color : #2f2f2f;
+  border: none;
+  margin-bottom: 50px;
+}
+
 
 @media only screen and (max-width: 415px) {
   .material-icons.md-36{
@@ -106,3 +136,6 @@ header{
 }
 
 
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

@@ -14,6 +14,8 @@ import { PlanComponent } from './plan/plan.component';
 import { ListComponent } from './list/list.component';
 import { RecepieComponent } from './recepie/recepie.component';
 import { HomeComponent } from './home/home.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AddNewRecepieComponent } from './add-new-recepie/add-new-recepie.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { HomeComponent } from './home/home.component';
     PlanComponent,
     ListComponent,
     RecepieComponent,
-    HomeComponent
+    HomeComponent,
+    AddNewRecepieComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,7 @@ import { HomeComponent } from './home/home.component';
     }),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

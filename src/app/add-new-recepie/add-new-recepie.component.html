@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <span class="material-icons icon-white form-dark"> close </span>
+    </div>
+    <div class="col">
+      <p style="margin: 0 auto">Neues Rezept</p>
+    </div>
+    <div class="col">
+      <button (click)="save()" style="margin-top: 20px">
+        <span class="material-icons icon-white form-dark" style="float: right"> done </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="form-field">
+  <input type="text" class="form-control" placeholder="Rezepttitel" [(ngModel)]="item.recepietitle" style="position: absolute; width: 72%">
+  <span class="material-icons icon-white form-dark" style="position: relative; top: 8px; left: 7px"></span>
+</div>
+
+<div class="form-field">
+  <input type="file" class="form-control" placeholder="Foto hinzufügen" [(ngModel)]="item.picture" style="position: absolute; width: 72%">
+  <span class="material-icons icon-white form-dark" style="position: relative; top: 8px; left: 7px"> photo_camera </span>
+</div>
+
+<div class="form-field">
+  <input type="text" class="form-control" placeholder="Kategorie" [(ngModel)]="item.categorie" style="position: absolute; width: 72%">
+  <span class="material-icons icon-white form-dark" style="position: relative; top: 8px; left: 7px"> restaurant </span>
+</div>
+
+<div class="form-field">
+  <input type="text" class="form-control" placeholder="Ernährungsform" [(ngModel)]="item.diet" style="position: absolute; width: 72%">
+  <span class="material-icons icon-white form-dark" style="position: relative; top: 8px; left: 7px"> restaurant_menu </span>
+</div>
+
+<div class="form-field">
+  <textarea type="text" class="form-control" rows="5" placeholder="Zutaten für 2 Portionen" [(ngModel)]="item.ingredients" style="position: absolute; width: 72%"></textarea>
+  <span class="material-icons icon-white form-dark" style="position: relative; top: 8px; left: 7px"> shopping_cart </span>
+</div>
+
+<div class="form-field">
+  <input type="text" class="form-control" placeholder="Zubereitung" [(ngModel)]="item.preparation" style="position: absolute; width: 72%">
+  <span class="material-icons icon-white form-dark" style="position: relative; top: 8px; left: 7px"> format_list_bulleted </span>
+</div>
+
+<div class="form-field">
+  <input type="text" class="form-control" placeholder="Nährwerte" [(ngModel)]="item.nutrition" style="position: absolute; width: 72%">
+  <span class="material-icons icon-white form-dark" style="position: relative; top: 8px; left: 7px"> local_fire_department </span>
+</div>
+
+<div class="form-field">
+  <input type="text" class="form-control" placeholder="Zubereitungszeit" [(ngModel)]="item.time" style="position: absolute; width: 72%">
+  <span class="material-icons icon-white form-dark" style="position: relative; top: 8px; left: 7px"> schedule </span>
+</div>
+
+<div class="form-field">
+  <input type="text" class="form-control" placeholder="Schwierigkeitsgrad" [(ngModel)]="item.difficulty" style="position: absolute; width: 72%">
+  <span class="material-icons icon-white form-dark" style="position: relative; top: 8px; left: 7px"> expand </span>
+</div>
+
