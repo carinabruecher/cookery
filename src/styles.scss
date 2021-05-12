@@ -6,7 +6,7 @@
 $orange: #FFAA00;
 $green: #9CBE3F;
 $blue: #77B5E3;
-$schriftfarbe: #2d2d2d;
+$schriftfarbe: #3d3d3d;
 
 
 /* Hover */
@@ -22,9 +22,7 @@ $l-background-color: #ffffff;
 
 
 
-p {
-  color: white;
-}
+
 
 body {
   background-color: $l-background-color !important;
@@ -32,10 +30,11 @@ body {
   font-family: 'Roboto', sans-serif !important;
   font-size: 16px;
   text-align: center;
+  color: $schriftfarbe !important;
 
   a{
-    color: white;
     text-decoration: none;
+    color: white;
   }
 
   span{
@@ -54,13 +53,16 @@ header{
   text-align: center;
 
   a{
-    color: white;
     text-decoration: none;
     object-position: center;
 
     img{
       width: 70%;
     }
+  }
+
+  a:hover {
+    text-decoration: none;
   }
 
   h1{
@@ -70,7 +72,6 @@ header{
 
   p{
     font-family: 'Handlee', cursive;
-    color: white;
   }
 }
 
@@ -79,6 +80,11 @@ header{
   flex-direction: column;
   max-width: 414px;
   margin: auto;
+  text-align: center;
+}
+.flex-container a:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .flex-item-r {
@@ -168,6 +174,9 @@ header{
 /* Dark Mode */
 $d-background-color: #0D0D0D;
 
+.darkmode p {
+  color: white;
+}
 
 .darkmode input[type="text"]{
   background-color : #2f2f2f;
@@ -198,7 +207,6 @@ $d-background-color: #0D0D0D;
     font-size: 36px;
   }
 }
-
 
 
 /* Importing Bootstrap SCSS file. */
