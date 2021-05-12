@@ -14,6 +14,11 @@ import { PlanComponent } from './plan/plan.component';
 import { ListComponent } from './list/list.component';
 import { RecepieComponent } from './recepie/recepie.component';
 import { HomeComponent } from './home/home.component';
+import { FirebaseService } from './services/firebase.service';
+import { SignInComponent } from './sign-in/sign-in.component';
+
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,9 @@ import { HomeComponent } from './home/home.component';
     PlanComponent,
     ListComponent,
     RecepieComponent,
-    HomeComponent
+    HomeComponent,
+    SignInComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +41,10 @@ import { HomeComponent } from './home/home.component';
       registrationStrategy: 'registerWhenStable:30000'
     }),
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     AngularFirestoreModule,
   ],
-  providers: [],
+  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
