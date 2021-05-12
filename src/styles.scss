@@ -2,22 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
-/* Dark Mode */
-$d-background-color: #0D0D0D;
-
-/* Light Mode */
-$l-background-color: #ffffff;
-
 
 $orange: #FFAA00;
 $green: #9CBE3F;
 $blue: #77B5E3;
+$schriftfarbe: #2d2d2d;
 
 
 /* Hover */
 $orange-h: #f29b00;
 $green-h: #8ca338;
 $blue-h: #669dbf;
+
+/* Light Mode */
+$l-background-color: #ffffff;
+
+
+
+
 
 
 p {
@@ -27,7 +29,7 @@ p {
 body {
   background-color: $l-background-color !important;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   font-size: 16px;
   text-align: center;
 
@@ -134,26 +136,61 @@ header{
   margin-top: 20px;
 }
 
-input[type="text"]{
+.form-control {
+  border-radius: 30px !important;
+  font-weight: 300;
+  font-family: 'Roboto Light';
+}
+
+.btn {
+  font-weight: 300;
+  font-family: 'Roboto Light';
+
+}
+
+
+.Filterung a.btn.btn-lg {
+  display: inline;
+  overflow: hidden;
+  width: 100px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: $orange;
+  border: 1px solid $orange;
+  border-radius: 40px;
+}
+
+
+
+
+/* Dark Mode */
+$d-background-color: #0D0D0D;
+
+
+.darkmode input[type="text"]{
   background-color : #2f2f2f;
   border: none;
 }
 
-input[type="text"]::placeholder {
+.darkmode input[type="text"]::placeholder {
   color: #bfbfbf;
   padding-left: 25px
 }
 
-input[type="text"]:focus {
+.darkmode input[type="text"]:focus {
   color: #bfbfbf;
   background-color : #2f2f2f;
 }
 
-textarea[type="text"] {
+.darkmode textarea[type="text"] {
   background-color : #2f2f2f;
   border: none;
   margin-bottom: 50px;
 }
+
+
 
 
 @media only screen and (max-width: 415px) {
