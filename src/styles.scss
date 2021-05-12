@@ -2,12 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
+/* Dark Mode */
+$d-background-color: #0D0D0D;
+
+/* Light Mode */
+$l-background-color: #ffffff;
+
+
+$orange: #FFAA00;
+$green: #9CBE3F;
+$blue: #77B5E3;
+
+
+/* Hover */
+$orange-h: #f29b00;
+$green-h: #8ca338;
+$blue-h: #669dbf;
+
+
 p {
   color: white;
 }
 
 body {
-  background-color: black !important;
+  background-color: $l-background-color !important;
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -28,7 +46,7 @@ body {
 }
 
 header{
-  background-color: black;
+  background-color: $l-background-color;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   text-align: center;
@@ -44,7 +62,7 @@ header{
   }
 
   h1{
-    color: #FFAA00;
+    color: $orange;
     font-family: 'Handlee', cursive;
   }
 
@@ -62,7 +80,7 @@ header{
 }
 
 .flex-item-r {
-  background-color: #FFAA00;
+  background-color: $orange;
   margin: 15px;
   padding: 20px 10px;
   min-height: auto;
@@ -70,9 +88,12 @@ header{
   border-radius: 20px;
   justify-content: center;
 }
+.flex-item-r:hover {
+  background-color: $orange-h;
+}
 
-.flex-item-l{
-  background-color: #9CBE3F;
+.flex-item-l {
+  background-color: $green;
   margin: 15px;
   padding: 20px 10px;
   min-height: auto;
@@ -80,15 +101,21 @@ header{
   border-radius: 20px;
   justify-content: center;
 }
+.flex-item-l:hover {
+  background-color: $green-h;
+}
 
-.flex-item-p{
-  background-color: #77B5E3;
+.flex-item-p {
+  background-color: $blue;
   margin: 15px;
   padding: 20px 10px;
   min-height: auto;
   min-height: 70px;
   border-radius: 20px;
   justify-content: center;
+}
+.flex-item-p:hover {
+  background-color: $blue-h;
 }
 
 .material-icons.md-48{
