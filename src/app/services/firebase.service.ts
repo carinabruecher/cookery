@@ -1,37 +1,53 @@
-import { Injectable } from '@angular/core';
+import {Injectable, NgZone} from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import {Router} from '@angular/router';
+import { AngularFirestore} from '@angular/fire/firestore';
+import { Router } from '@angular/router';
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class FirebaseService {
 
-  isLoggedIn = false;
+  isLoggedIn: boolean;
   constructor(public firebaseAuth: AngularFireAuth,
-    public router: Router) { }
+              public router: Router,
+              public afs: AngularFirestore) {
+    this.isLoggedIn = false;
 
-  // tslint:disable-next-line:typedef
+    this.firebaseAuth.onAuthStateChanged((user) => {
+      if (user) {
+        this.isLoggedIn = true;
+      } else {
+        this.isLoggedIn = false;
+      }
+    });
+  }
+
+
   async signin(email: string, password: string){
     await this.firebaseAuth.signInWithEmailAndPassword(email, password)
-      .then(res => {
+      .then((res) => {
         this.isLoggedIn = true;
         localStorage.setItem('user', JSON.stringify(res.user));
-      });
+        this.router.navigate(['']);
+      })
   }
 
   async signup(email: string, password: string){
-    await this.firebaseAuth.createUserWithEmailAndPassword(email, password)
-      .then(res => {
+    return this.firebaseAuth.createUserWithEmailAndPassword(email, password)
+      .then (res => {
         this.isLoggedIn = true;
         localStorage.setItem('user', JSON.stringify(res.user));
+        this.router.navigate(['']);
       });
   }
 
   logout(){
     return this.firebaseAuth.signOut().then(() => {
-      localStorage.removeItem('user');
       this.router.navigate(['sign-in']);
+      localStorage.removeItem('user');
     });
   }
 }

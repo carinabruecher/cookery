@@ -1,8 +1,9 @@
 <div *ngIf="!isSignedIn">
   <h2>Sign Up</h2>
-  <input type="text" #emailSignup/>
-  <input type="text" #passwordSignup/>
-  <button (click)="onSignup(emailSignup.value, passwordSignup.value)">Sign up</button>
+  <input type="text" #emailSignup value="E-Mail"/><br>
+  <input type="password" #passwordSignup value="Passwort"/> <br>
+  <button (click)="onSignup(emailSignup.value, passwordSignup.value)">Sign up</button> <br>
+  <button routerLink="/anmelden">Hier geht es zur Anmeldung</button>
 </div>
 
-<app-home *ngIf="isSignedIn"></app-home>
+
