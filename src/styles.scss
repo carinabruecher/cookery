@@ -2,20 +2,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
-p {
-  color: white;
-}
+
+$orange: #FFAA00;
+$green: #9CBE3F;
+$blue: #77B5E3;
+$schriftfarbe: #3d3d3d;
+
+
+/* Hover */
+$orange-h: #f29b00;
+$green-h: #8ca338;
+$blue-h: #669dbf;
+
+/* Light Mode */
+$l-background-color: #ffffff;
+
+
+
+
+
+
+
 
 body {
-  background-color: black;
+  background-color: $l-background-color !important;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   font-size: 16px;
   text-align: center;
+  color: $schriftfarbe !important;
 
   a{
-    color: white;
     text-decoration: none;
+    color: $orange;
+  }
+  a:hover {
+    text-decoration: none;
+    color: $orange-h;
   }
 
   span{
@@ -28,13 +51,13 @@ body {
 }
 
 header{
-  background-color: black;
+  background-color: $l-background-color;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   text-align: center;
+  margin-top:10%;
 
   a{
-    color: white;
     text-decoration: none;
     object-position: center;
 
@@ -43,8 +66,12 @@ header{
     }
   }
 
+  a:hover {
+    text-decoration: none;
+  }
+
   h1{
-    color: #FFAA00;
+    color: $orange;
     font-family: 'Handlee', cursive;
   }
 
@@ -53,15 +80,35 @@ header{
   }
 }
 
+
+.darkLink {
+  color: $schriftfarbe !important;
+}
+
+.bottomLink {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+
+
+
+
 .flex-container {
   display: flex;
   flex-direction: column;
   max-width: 414px;
   margin: auto;
+  text-align: center;
+}
+.flex-container a:hover {
+  text-decoration: none;
 }
 
 .flex-item-r {
-  background-color: #FFAA00;
+  background-color: $orange;
   margin: 15px;
   padding: 20px 10px;
   min-height: auto;
@@ -69,9 +116,12 @@ header{
   border-radius: 20px;
   justify-content: center;
 }
+.flex-item-r:hover {
+  background-color: $orange-h;
+}
 
-.flex-item-l{
-  background-color: #9CBE3F;
+.flex-item-l {
+  background-color: $green;
   margin: 15px;
   padding: 20px 10px;
   min-height: auto;
@@ -79,15 +129,21 @@ header{
   border-radius: 20px;
   justify-content: center;
 }
+.flex-item-l:hover {
+  background-color: $green-h;
+}
 
-.flex-item-p{
-  background-color: #77B5E3;
+.flex-item-p {
+  background-color: $blue;
   margin: 15px;
   padding: 20px 10px;
   min-height: auto;
   min-height: 70px;
   border-radius: 20px;
   justify-content: center;
+}
+.flex-item-p:hover {
+  background-color: $blue-h;
 }
 
 .material-icons.md-48{
@@ -98,6 +154,97 @@ header{
   color: rgba(255, 255, 255, 1);
 }
 
+.icon-white{
+  color: white;
+}
+
+.form-field {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.form-control {
+  border-radius: 30px;
+  font-weight: 300;
+  font-family: 'Roboto Light';
+}
+
+.btn {
+  font-weight: 300;
+  font-family: 'Roboto Light';
+  border-radius: 40px !important;
+  padding: 0.5rem 40px !important;
+}
+.btn-lg {
+  font-size: 16px !important;
+}
+.btn.btn-primaer {
+  background-color: $orange;
+  color: white;
+}
+.btn.btn-primaer:hover {
+  background-color: $orange-h;
+  color: white;
+}
+.btn-add {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  padding: 0.5rem 0.6rem !important;     // das padding von .btn überschreiben, damit es ein schöner runder Button ist
+}
+
+
+
+.Filterung {
+  display: inline-flex;
+}
+
+.Filterung a.btn.btn-lg {
+  display: inline-flex;
+  overflow: hidden;
+  margin-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: $orange;
+  border: 1px solid $orange;
+
+}
+.Filterung span.material-icons {
+  padding-right: 8px;
+}
+
+
+
+/* Dark Mode */
+$d-background-color: #0D0D0D;
+
+.darkmode p {
+  color: white;
+}
+
+.darkmode input[type="text"]{
+  background-color : #2f2f2f;
+  border: none;
+}
+
+.darkmode input[type="text"]::placeholder {
+  color: #bfbfbf;
+  padding-left: 25px
+}
+
+.darkmode input[type="text"]:focus {
+  color: #bfbfbf;
+  background-color : #2f2f2f;
+}
+
+.darkmode textarea[type="text"] {
+  background-color : #2f2f2f;
+  border: none;
+  margin-bottom: 50px;
+}
+
+
+
 
 @media only screen and (max-width: 415px) {
   .material-icons.md-36{
@@ -106,3 +253,5 @@ header{
 }
 
 
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

@@ -1,8 +1,30 @@
-<div *ngIf="!isSignedIn">
-  <input type="text" #emailSignin value="E-Mail"/> <br>
-  <input type="password" #passwordSignin value="Passwort"/> <br>
-  <button (click)="onSignin(emailSignin.value, passwordSignin.value)">Sign In</button> <br>
-  <button routerLink="/regestrieren">Hier geht es zur Regestrierung</button>
+<div class="flex-container">
+
+  <header>
+    <div class="container">
+      <a href="" class="logo">
+        <h1>Willkommen zurück bei Cookery</h1>
+      </a>
+    </div>
+  </header>
+
+  <br><br>
+
+
+  <div *ngIf="!isSignedIn">
+    <input type="text" class="form-control" #emailSignin placeholder="E-Mail"/> <br>
+    <input type="password" class="form-control" #passwordSignin placeholder="•••••••••"/>
+    <br><br>
+    <button class="btn btn-primaer btn-lg" (click)="onSignin(emailSignin.value, passwordSignin.value)">Anmelden</button>
+    <br><br>
+    <a class="darkLink" routerLink="#">Passwort vergessen?</a>
+    <br><br>
+    <a class="bottomLink" routerLink="/regestrieren">Hier geht es zur <u>Registrierung</u></a>
+  </div>
+
 </div>
+
+
+
 
 
