@@ -11,13 +11,16 @@
   <br><br>
 
 
-  <div *ngIf="!isSignedIn">
+  <div>
     <input type="text" class="form-control" #emailSignup placeholder="E-Mail"/><br>
     <input type="password" class="form-control" #passwordSignup placeholder="•••••••••"/>
+    <br><br>
+    <input type="checkbox" id="daten">
+    <label for="daten">Datenschutzrichtlinen</label>
     <br><br>
     <button class="btn btn-primaer btn-lg" (click)="onSignup(emailSignup.value, passwordSignup.value)">Registrieren</button>
     <br><br>
     <a class="bottomLink" routerLink="/anmelden">Hier geht's zum <u>Login</u></a>
   </div>
 
-
+</div>

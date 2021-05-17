@@ -1,0 +1,13 @@
+<div>
+  <input [(ngModel)]="oldPassword" type="text" id="oldPassword"
+         name="oldPassword" placeholder="Old Password" class="form-control"> <br>
+  <input [(ngModel)]="newPassword" type="text" id="newPassword"
+         name="newPassword" placeholder="New Password" class="form-control"> <br>
+  <input [(ngModel)]="confirmPassword" type="text"
+         id="confirmPassword" name="confirmPassword" placeholder="Confirm
+    Password" class="form-control">
+  <br>
+  <button class="btn btn-primaer btn-lg" (click)="handleResetPassword()">Bestätigen</button>
+</div>
+
+

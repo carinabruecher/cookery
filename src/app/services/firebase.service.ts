@@ -1,9 +1,8 @@
-import {Injectable, NgZone} from '@angular/core';
+import {Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore} from '@angular/fire/firestore';
 import { Router } from '@angular/router';
-
-
+import { auth } from 'firebase/firebase-auth';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +12,7 @@ export class FirebaseService {
   isLoggedIn: boolean;
   constructor(public firebaseAuth: AngularFireAuth,
               public router: Router,
+              public firestore: AngularFirestore,
               public afs: AngularFirestore) {
     this.isLoggedIn = false;
 
@@ -25,29 +25,62 @@ export class FirebaseService {
     });
   }
 
+  getAuth(){
+    return this.firebaseAuth.authState;
+  }
 
   async signin(email: string, password: string){
     await this.firebaseAuth.signInWithEmailAndPassword(email, password)
       .then((res) => {
         this.isLoggedIn = true;
         localStorage.setItem('user', JSON.stringify(res.user));
-        this.router.navigate(['']);
-      })
+        this.router.navigate(['home']);
+      });
   }
 
-  async signup(email: string, password: string){
+  /*async signup(email: string, password: string){
     return this.firebaseAuth.createUserWithEmailAndPassword(email, password)
       .then (res => {
         this.isLoggedIn = true;
         localStorage.setItem('user', JSON.stringify(res.user));
-        this.router.navigate(['']);
+        this.router.navigate(['home']);
       });
+  }*/
+  async signup(
+    email: string,
+    password: string
+  ): Promise<auth.UserCredential> {
+    try {
+      const newUserCredential: auth.UserCredential = await this.firebaseAuth.createUserWithEmailAndPassword(
+        email,
+        password
+      );
+      await this.firestore
+        .doc(`userProfile/${newUserCredential.user.uid}`)
+        .set({ email });
+      /*
+        Here we add the functionality to send the email.
+      */
+      await newUserCredential.user.sendEmailVerification();
+
+      return newUserCredential;
+      this.router.navigate(['home']);
+    } catch (error) {
+      throw error;
+    }
   }
 
   logout(){
     return this.firebaseAuth.signOut().then(() => {
-      this.router.navigate(['sign-in']);
+      this.router.navigate(['anmelden']);
       localStorage.removeItem('user');
     });
+  }
+
+  resetPasswordInit (email: string){
+    return this.firebaseAuth.sendPasswordResetEmail(
+      email,
+      { url: 'http://localhost:4200/auth/userMgmt'}
+    );
   }
 }

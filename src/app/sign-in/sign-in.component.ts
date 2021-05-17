@@ -8,11 +8,15 @@ import { FirebaseService } from '../services/firebase.service';
 })
 export class SignInComponent implements OnInit {
 
+  public fehler: boolean;
+
   isSignedIn = false;
 
   constructor(
     public firebaseService: FirebaseService
-  ) { }
+  ) {
+    this.fehler = false;
+  }
 
   ngOnInit(): void {
   }
@@ -21,5 +25,7 @@ export class SignInComponent implements OnInit {
     await this.firebaseService.signin(email, password);
     if (this.firebaseService.isLoggedIn) {
       this.isSignedIn = true;
+    } else {
+      this.fehler = true;
     }}
 }

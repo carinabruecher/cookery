@@ -19,6 +19,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
 
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { PasswordResetComponent } from './password-reset/password-reset.component';
+import { UserManagementComponent } from './user-management/user-management.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     RecepieComponent,
     HomeComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    PasswordResetComponent,
+    UserManagementComponent
   ],
   imports: [
     BrowserModule,

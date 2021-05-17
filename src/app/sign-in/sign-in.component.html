@@ -11,15 +11,19 @@
   <br><br>
 
 
-  <div *ngIf="!isSignedIn">
+  <div>
     <input type="text" class="form-control" #emailSignin placeholder="E-Mail"/> <br>
     <input type="password" class="form-control" #passwordSignin placeholder="•••••••••"/>
     <br><br>
     <button class="btn btn-primaer btn-lg" (click)="onSignin(emailSignin.value, passwordSignin.value)">Anmelden</button>
     <br><br>
-    <a class="darkLink" routerLink="#">Passwort vergessen?</a>
+    <a class="darkLink" routerLink="/passwortzurücksetzen">Passwort vergessen?</a>
     <br><br>
     <a class="bottomLink" routerLink="/regestrieren">Hier geht es zur <u>Registrierung</u></a>
+  </div>
+
+  <div *ngIf="fehler">
+    <p>Deine Benutzerdaten sind falsch. Vergewissere dich, dass du deine richtige E-Mail-Adresse und dein richtiges Passwort verwendest.</p>
   </div>
 
 </div>
