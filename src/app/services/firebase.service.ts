@@ -66,7 +66,7 @@ export class FirebaseService {
       return newUserCredential;
     } catch (error) {
       throw alert('Es ist ein Fehler aufgetreten.');
-    } 
+    }
   }
 
   logout(){

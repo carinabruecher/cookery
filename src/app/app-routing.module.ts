@@ -11,6 +11,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { AuthGuard } from './shared/guard/auth.guard';
 import { PasswordResetComponent } from './password-reset/password-reset.component';
 import { UserManagementComponent } from './user-management/user-management.component';
+import { VerifyMailComponent} from './verify-mail/verify-mail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'anmelden', component: SignInComponent},
   { path: 'regestrieren', component: SignUpComponent},
   { path: 'passwortzurücksetzen', component: PasswordResetComponent},
-  { path: 'userMgmt', component: UserManagementComponent}
+  { path: 'userMgmt', component: UserManagementComponent},
+  { path: 'verifyMail', component: VerifyMailComponent}
 ];
 
 @NgModule({

@@ -22,6 +22,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { PasswordResetComponent } from './password-reset/password-reset.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { PasswordStrengthMeterModule } from 'angular-password-strength-meter';
+import { VerifyMailComponent } from './verify-mail/verify-mail.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { PasswordStrengthMeterModule } from 'angular-password-strength-meter';
     SignInComponent,
     SignUpComponent,
     PasswordResetComponent,
-    UserManagementComponent
+    UserManagementComponent,
+    VerifyMailComponent
   ],
   imports: [
     BrowserModule,
