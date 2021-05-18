@@ -21,6 +21,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { PasswordResetComponent } from './password-reset/password-reset.component';
 import { UserManagementComponent } from './user-management/user-management.component';
+import { PasswordStrengthMeterModule } from 'angular-password-strength-meter';
+
 
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ import { UserManagementComponent } from './user-management/user-management.compo
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    PasswordStrengthMeterModule,
   ],
   providers: [FirebaseService],
   bootstrap: [AppComponent]

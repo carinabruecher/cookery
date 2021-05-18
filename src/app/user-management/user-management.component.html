@@ -3,6 +3,7 @@
          name="oldPassword" placeholder="Old Password" class="form-control"> <br>
   <input [(ngModel)]="newPassword" type="text" id="newPassword"
          name="newPassword" placeholder="New Password" class="form-control"> <br>
+  <password-strength-meter [password]="newPassword"></password-strength-meter>
   <input [(ngModel)]="confirmPassword" type="text"
          id="confirmPassword" name="confirmPassword" placeholder="Confirm
     Password" class="form-control">

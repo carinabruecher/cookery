@@ -64,10 +64,9 @@ export class FirebaseService {
       await newUserCredential.user.sendEmailVerification();
 
       return newUserCredential;
-      this.router.navigate(['home']);
     } catch (error) {
-      throw error;
-    }
+      throw alert('Es ist ein Fehler aufgetreten.');
+    } 
   }
 
   logout(){

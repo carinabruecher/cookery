@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../services/firebase.service';
 
+
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -9,6 +10,7 @@ import { FirebaseService } from '../services/firebase.service';
 export class SignUpComponent implements OnInit {
 
   isSignedIn = false;
+  passwordSignup: string;
 
   constructor(
     public firebaseService: FirebaseService
