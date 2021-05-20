@@ -2,6 +2,31 @@
 
 <a href="/add-new-recepie" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Primary link</a>
 
-<div *ngFor="let document of list | async">
-  {{document}}
-</div>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">recepietitle</th>
+    <th scope="col">categorie</th>
+    <th scope="col">diet</th>
+    <th scope="col">difficulty</th>
+    <th scope="col">ingredients</th>
+    <th scope="col">nutrition</th>
+    <th scope="col">preparation</th>
+    <th scope="col">time </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let recepie of Recepies; let i = index">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ recepie.recepietitle }}</td>
+    <td>{{ recepie.categorie }}</td>
+    <td>{{ recepie.diet }}</td>
+    <td>{{ recepie.difficulty }}</td>
+    <td>{{ recepie.ingredients }}</td>
+    <td>{{ recepie.nutrition }}</td>
+    <td>{{ recepie.preparation}}</td>
+    <td>{{ recepie.time }}</td>
+  </tr>
+  </tbody>
+</table>
