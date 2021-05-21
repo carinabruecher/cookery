@@ -1,14 +1,28 @@
-<div>
-  <input [(ngModel)]="oldPassword" type="text" id="oldPassword"
-         name="oldPassword" placeholder="Old Password" class="form-control"> <br>
-  <input [(ngModel)]="newPassword" type="text" id="newPassword"
-         name="newPassword" placeholder="New Password" class="form-control"> <br>
-  <password-strength-meter [password]="newPassword"></password-strength-meter>
-  <input [(ngModel)]="confirmPassword" type="text"
-         id="confirmPassword" name="confirmPassword" placeholder="Confirm
-    Password" class="form-control">
-  <br>
-  <button class="btn btn-primaer btn-lg" (click)="handleResetPassword()">Bestätigen</button>
+<div class="main-wrapper">
+
+  <header>
+    <div class="container">
+      <a href="" class="logo">
+        <img src="../../assets/Logo-Rechteckig.png"> <!-- Einbindung des Logos funktioniert noch nicht; kp why ? -->
+      </a>
+        <h1>Willkommen zurück bei Cookery</h1>
+    </div>
+  </header>
+
+
+  <div>
+    <input [(ngModel)]="oldPassword" type="text" id="oldPassword"
+          name="oldPassword" placeholder="Old Password" class="form-control"> <br>
+    <input [(ngModel)]="newPassword" type="text" id="newPassword"
+          name="newPassword" placeholder="New Password" class="form-control"> <br>
+    <password-strength-meter [password]="newPassword"></password-strength-meter>
+    <input [(ngModel)]="confirmPassword" type="text"
+          id="confirmPassword" name="confirmPassword" placeholder="Confirm
+      Password" class="form-control">
+    <br>
+    <button class="btn btn-primaer btn-lg" (click)="handleResetPassword()">Bestätigen</button>
+  </div>
+
 </div>
 
 

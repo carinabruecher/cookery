@@ -1,17 +1,21 @@
+<div class class="main-wrapper">
 <header>
   <div class="container">
     <a href="" class="logo">
-      <h1>Wilkommen zurück!</h1>
+      <img src="../../assets/Logo-Rechteckig.png"> <!-- Einbindung des Logos funktioniert noch nicht; kp why ? -->
     </a>
-      <p>Cookery wünscht Dir viel Spaß beim Organisieren deines Küchen-Haushalts!</p>
+      <h1>Willkommen zurück bei Cookery</h1>
   </div>
 </header>
 
 <div class="flex-container">
-  <a href="#" routerLink="/rezept"> <div class="flex-item-r"> Rezepte <br><br> <span class="material-icons md-48"> menu_book </span> </div> </a>
-  <a href="#" routerLink="/list"> <div class="flex-item-l"> Einkaufsliste <br><br> <span class="material-icons md-48"> checklist_rtl </span> </div> </a>
-  <a href="#" routerLink="/plan"> <div class="flex-item-p"> Essensplan <br><br> <span class="material-icons md-48"> calendar_today </span> </div> </a>
+  <a href="#" routerLink="/rezept"> <div class="flex-item-r flex-item"> Rezepte <br><br> <span class="material-icons md-48"> menu_book </span> </div> </a>
+  <a href="#" routerLink="/list"> <div class="flex-item-l flex-item"> Einkaufsliste <br><br> <span class="material-icons md-48"> checklist_rtl </span> </div> </a>
+  <a href="#" routerLink="/plan"> <div class="flex-item-p flex-item"> Essensplan <br><br> <span class="material-icons md-48"> calendar_today </span> </div> </a>
 </div>
 
-<button (click)="toLogout()">Logout</button>
+<button class="btn btn-lg" (click)="toLogout()">Logout</button>
+
+
+</div>
 

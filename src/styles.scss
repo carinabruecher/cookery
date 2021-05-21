@@ -95,16 +95,26 @@ header{
 
 
 
-
-.flex-container {
-  display: flex;
-  flex-direction: column;
+/* Gesamt-Breite verschmälern */
+.main-wrapper {
   max-width: 414px;
   margin: auto;
   text-align: center;
 }
+
+
+/* Kacheln */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 .flex-container a:hover {
   text-decoration: none;
+}
+
+.flex-item {
+  color: white;
 }
 
 .flex-item-r {
