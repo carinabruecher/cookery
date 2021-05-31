@@ -1,51 +1,30 @@
 
 
-<div class="form-field" style="display: inline-flex; width:100%;">
-  <div style="border: 1px solid #ced4da; border-right: 0px solid #ccc; border-radius: 30px 0px 0px 30px; max-width: 35px;">
-    <span class="material-icons" style="color:#ced4da; padding-left: 10px"> search </span>
-  </div>
-  <input type="text" class="form-control" placeholder="Welches Rezept suchst du?" style="border-left: 0px solid #ccc; border-radius:0px 30px 30px 0px;">
-</div>
-
-
-
-<div class="Filterung">
-<a href="" class="btn btn-lg" role="button" aria-disabled="true">
-  <span class="material-icons"> menu_book </span> Alle</a>
-<a href="" class="btn btn-lg" role="button" aria-disabled="true">
-  <span class="material-icons"> favorite_border </span> Favoriten</a>
-<a href="" class="btn btn-lg" role="button" aria-disabled="true">
-  <span class="material-icons"> schedule </span> Zubereitungszeit</a>
-<a href="" class="btn btn-lg" role="button" aria-disabled="true">
-  <span class="material-icons"> restaurant </span> Kategorie</a>
-<a href="" class="btn btn-lg" role="button" aria-disabled="true">
-  <span class="material-icons"> expand </span> Schwierigkeitsgrad</a>
-</div>
-
-<hr>
-
-<div>
-  Lasagne Bolognese
-  <hr>
-  Penne Quatro Formaggi
-  <hr>
-  Chinapfanne
-  <hr>
-  Schnitzel Milanese
-</div>
-
-
-
-<br><br>
-<p>
-  <a href="/add-new-recepie" class="btn btn-primaer btn-lg btn-add" role="button" aria-disabled="true"><span class="material-icons"> add </span></a>
-</p>
-
-
-
-
-
-
-
-
-
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">recepietitle</th>
+    <th scope="col">categorie</th>
+    <th scope="col">diet</th>
+    <th scope="col">difficulty</th>
+    <th scope="col">ingredients</th>
+    <th scope="col">nutrition</th>
+    <th scope="col">preparation</th>
+    <th scope="col">time </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let recepie of Recepies; let i = index">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ recepie.recepietitle }}</td>
+    <td>{{ recepie.categorie }}</td>
+    <td>{{ recepie.diet }}</td>
+    <td>{{ recepie.difficulty }}</td>
+    <td>{{ recepie.ingredients }}</td>
+    <td>{{ recepie.nutrition }}</td>
+    <td>{{ recepie.preparation}}</td>
+    <td>{{ recepie.time }}</td>
+  </tr>
+  </tbody>
+</table>

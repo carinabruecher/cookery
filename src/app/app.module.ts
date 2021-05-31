@@ -16,6 +16,7 @@ import { RecepieComponent } from './recepie/recepie.component';
 import { HomeComponent } from './home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddNewRecepieComponent } from './add-new-recepie/add-new-recepie.component';
+import { RecepieService} from './recepie.service';
 
 @NgModule({
   declarations: [
