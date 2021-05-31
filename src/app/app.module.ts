@@ -14,9 +14,16 @@ import { PlanComponent } from './plan/plan.component';
 import { ListComponent } from './list/list.component';
 import { RecepieComponent } from './recepie/recepie.component';
 import { HomeComponent } from './home/home.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AddNewRecepieComponent } from './add-new-recepie/add-new-recepie.component';
-import { RecepieService} from './recepie.service';
+import { FirebaseService } from './services/firebase.service';
+import { SignInComponent } from './sign-in/sign-in.component';
+
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { PasswordResetComponent } from './password-reset/password-reset.component';
+import { UserManagementComponent } from './user-management/user-management.component';
+import { PasswordStrengthMeterModule } from 'angular-password-strength-meter';
+import { VerifyMailComponent } from './verify-mail/verify-mail.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +32,11 @@ import { RecepieService} from './recepie.service';
     ListComponent,
     RecepieComponent,
     HomeComponent,
-    AddNewRecepieComponent
+    SignInComponent,
+    SignUpComponent,
+    PasswordResetComponent,
+    UserManagementComponent,
+    VerifyMailComponent
   ],
   imports: [
     BrowserModule,
@@ -38,10 +49,11 @@ import { RecepieService} from './recepie.service';
       registrationStrategy: 'registerWhenStable:30000'
     }),
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     AngularFirestoreModule,
-    NgbModule,
+    PasswordStrengthMeterModule,
   ],
-  providers: [],
+  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -34,7 +34,11 @@ body {
 
   a{
     text-decoration: none;
-    color: white;
+    color: $orange;
+  }
+  a:hover {
+    text-decoration: none;
+    color: $orange-h;
   }
 
   span{
@@ -51,6 +55,7 @@ header{
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   text-align: center;
+  margin-top:10%;
 
   a{
     text-decoration: none;
@@ -75,15 +80,40 @@ header{
   }
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: column;
+
+.darkLink {
+  color: $schriftfarbe !important;
+}
+
+.bottomLink {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+
+
+
+/* Gesamt-Breite verschmälern */
+.main-wrapper {
   max-width: 414px;
   margin: auto;
   text-align: center;
 }
+
+
+/* Kacheln */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 .flex-container a:hover {
   text-decoration: none;
+}
+
+.flex-item {
   color: white;
 }
 
@@ -153,6 +183,7 @@ header{
   font-weight: 300;
   font-family: 'Roboto Light';
   border-radius: 40px !important;
+  padding: 0.5rem 40px !important;
 }
 .btn-lg {
   font-size: 16px !important;
@@ -169,6 +200,7 @@ header{
   position: absolute;
   bottom: 10px;
   right: 20px;
+  padding: 0.5rem 0.6rem !important;     // das padding von .btn überschreiben, damit es ein schöner runder Button ist
 }
 
 
