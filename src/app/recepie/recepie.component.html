@@ -39,7 +39,7 @@
   <tbody>
   <tr *ngFor="let recepie of Recepies; let i = index">
     <!-- <th scope="row">{{ i + 1 }}</th> -->
-    <td>{{ recepie.recepietitle }}</td>
+    <td><a href="/edit-recepie"> {{ recepie.recepietitle }} </a></td>
     <td class="displayNone"> <span class="material-icons"> favorite_border </span> </td>
     <td class="displayNone"> <span class="material-icons"> create </span> </td>
     <td class="displayNone"> <span class="material-icons"> delete </span> </td>

@@ -25,6 +25,7 @@ import { PasswordStrengthMeterModule } from 'angular-password-strength-meter';
 import { VerifyMailComponent } from './verify-mail/verify-mail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddNewRecepieComponent } from './add-new-recepie/add-new-recepie.component';
+import { EditRecepieComponent } from './edit-recepie/edit-recepie.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { AddNewRecepieComponent } from './add-new-recepie/add-new-recepie.compon
     PasswordResetComponent,
     UserManagementComponent,
     VerifyMailComponent,
-    AddNewRecepieComponent
+    AddNewRecepieComponent,
+    EditRecepieComponent
   ],
   imports: [
     BrowserModule,
@@ -57,8 +59,8 @@ import { AddNewRecepieComponent } from './add-new-recepie/add-new-recepie.compon
     AngularFirestoreModule,
     PasswordStrengthMeterModule,
     NgbModule
-    
-  
+
+
   ],
   providers: [FirebaseService],
   bootstrap: [AppComponent]

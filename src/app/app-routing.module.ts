@@ -13,6 +13,7 @@ import { AuthGuard } from './shared/guard/auth.guard';
 import { PasswordResetComponent } from './password-reset/password-reset.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { VerifyMailComponent} from './verify-mail/verify-mail.component';
+import { EditRecepieComponent } from './edit-recepie/edit-recepie.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: 'passwortzurücksetzen', component: PasswordResetComponent},
   { path: 'userMgmt', component: UserManagementComponent},
   { path: 'verifyMail', component: VerifyMailComponent},
-  { path: 'add-new-recepie', component: AddNewRecepieComponent}
+  { path: 'add-new-recepie', component: AddNewRecepieComponent},
+  { path: 'edit-recepie', component: EditRecepieComponent}
 ];
 
 @NgModule({
