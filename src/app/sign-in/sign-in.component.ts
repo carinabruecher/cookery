@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Globals } from '../global';
 import { FirebaseService } from '../services/firebase.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class SignInComponent implements OnInit {
   isSignedIn = false;
 
   constructor(
-    public firebaseService: FirebaseService
+    public firebaseService: FirebaseService,
+    public global: Globals
   ) {
     this.fehler = false;
   }
@@ -23,7 +25,7 @@ export class SignInComponent implements OnInit {
 
   async onSignin(email: string, password: string): Promise<void> {
     await this.firebaseService.signin(email, password);
-    if (this.firebaseService.isLoggedIn) {
+    if (this.global.isLoggedIn) {
       this.isSignedIn = true;
     } else {
       this.fehler = true;

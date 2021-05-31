@@ -3,24 +3,24 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore} from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { auth } from 'firebase/firebase-auth';
+import { Globals} from '../../app/global';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FirebaseService {
 
-  isLoggedIn: boolean;
   constructor(public firebaseAuth: AngularFireAuth,
               public router: Router,
               public firestore: AngularFirestore,
-              public afs: AngularFirestore) {
-    this.isLoggedIn = false;
+              public afs: AngularFirestore,
+              public globals: Globals) {
 
     this.firebaseAuth.onAuthStateChanged((user) => {
       if (user) {
-        this.isLoggedIn = true;
+        globals.isLoggedIn = true;
       } else {
-        this.isLoggedIn = false;
+        globals.isLoggedIn = false; 
       }
     });
   }
@@ -32,7 +32,7 @@ export class FirebaseService {
   async signin(email: string, password: string){
     await this.firebaseAuth.signInWithEmailAndPassword(email, password)
       .then((res) => {
-        this.isLoggedIn = true;
+        this.globals.isLoggedIn = true;
         localStorage.setItem('user', JSON.stringify(res.user));
         this.router.navigate(['home']);
       });
