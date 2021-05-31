@@ -1,7 +1,8 @@
+<div class class="main-wrapper">
 <div class="container">
   <div class="row head-zeile">
     <div class="col">
-      <span class="material-icons form-dark"> close </span>
+      <a href="/rezept"><span class="material-icons form-dark"> close </span></a>
     </div>
     <div class="col">
       <p style="margin: 0 auto">Rezept bearbeiten</p>
@@ -35,12 +36,12 @@
 
 <div class="form-field rezeptinhalte-box">
   <span class="material-icons form-dark icon-positionierung"> shopping_cart </span> Zutaten für 2 Portionen <br>
-  <textarea type="text" class="form-control rezeptinhalt" rows="5" placeholder="Zutaten" [(ngModel)]="item.ingredients"></textarea>
+  <textarea type="text" class="form-control rezeptinhalt" rows="5" placeholder="Datenbank auslesen" [(ngModel)]="item.ingredients"></textarea>
 </div>
 
 <div class="form-field rezeptinhalte-box">
   <span class="material-icons form-dark icon-positionierung"> format_list_bulleted </span> Zubereitung <br>
-  <input type="text" class="form-control rezeptinhalt" placeholder="Füge die einzelnen Bearbeitungsschritte hinzu." [(ngModel)]="item.preparation" style="display: block;">
+  <input type="text" class="form-control rezeptinhalt" placeholder="Datenbank auslesen" [(ngModel)]="item.preparation" style="display: block;">
 </div>
 
 <div class="form-field rezeptinhalte-box displayFlex">
@@ -56,5 +57,7 @@
 <div class="form-field rezeptinhalte-box displayFlex">
   <span class="material-icons form-dark icon-positionierung"> expand </span>
   <input type="text" class="form-control rezeptinhalt" placeholder="Schwierigkeitsgrad" [(ngModel)]="item.difficulty">
+</div>
+
 </div>
 

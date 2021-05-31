@@ -205,6 +205,16 @@ header{
 
 
 
+
+/* ------------------------ R E Z E P T  Ü B E R S I C H T ------------------------ */
+
+.icon-lupe {
+  margin-top: 6px;
+  padding-left: 10px;
+  color: #ced4da;
+}
+
+
 .Filterung {
   display: inline-flex;
   float: left;
@@ -264,7 +274,8 @@ td.icon-box a {
 
 
 
-/* Neues Rezept & Rezept bearbeiten - Seite */
+/* ------------ N E U E S  R E Z E P T  &  R E Z E P T  B E A R B E I T E N - S E I T E ------------ */
+
 input.rezepttitel {
   padding-left: 0px;
 }

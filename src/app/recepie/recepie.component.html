@@ -1,6 +1,8 @@
+<div class class="main-wrapper">
+
 <div class="form-field" style="display: inline-flex; width:100%;">
   <div style="border: 1px solid #ced4da; border-right: 0px solid #ccc; border-radius: 30px 0px 0px 30px; max-width: 35px;">
-    <span class="material-icons" style="color:#ced4da; padding-left: 10px"> search </span>
+    <span class="material-icons icon-lupe"> search </span>
   </div>
   <input type="text" class="form-control" placeholder="Welches Rezept suchst du?" style="border-left: 0px solid #ccc; border-radius:0px 30px 30px 0px;">
 </div>
@@ -16,6 +18,8 @@
   <span class="material-icons"> schedule </span> Zubereitungszeit</a>
 <a href="" class="btn btn-lg" role="button" aria-disabled="true">
   <span class="material-icons"> restaurant </span> Kategorie</a>
+  <a href="" class="btn btn-lg" role="button" aria-disabled="true">
+    <span class="material-icons"> expand </span> Ernährungsform</a>
 <a href="" class="btn btn-lg" role="button" aria-disabled="true">
   <span class="material-icons"> expand </span> Schwierigkeitsgrad</a>
 </div>
@@ -40,9 +44,9 @@
   <tr *ngFor="let recepie of Recepies; let i = index">
     <!-- <th scope="row">{{ i + 1 }}</th> -->
     <td>{{ recepie.recepietitle }}</td>
-    <td class="displayNone icon-box icon-box-fav"> <span class="material-icons"> favorite_border </span> </td>
-    <td class="displayNone icon-box icon-box-edit"> <a href="/edit-recepie"><span class="material-icons"> create </span></a> </td>
-    <td class="displayNone icon-box icon-box-del"> <span class="material-icons"> delete </span> </td>
+    <td class="displayNone icon-box icon-box-fav" width="5%"> <span class="material-icons"> favorite_border </span> </td>
+    <td class="displayNone icon-box icon-box-edit" width="5%"> <a href="/edit-recepie"><span class="material-icons"> create </span></a> </td>
+    <td class="displayNone icon-box icon-box-del" width="5%"> <span class="material-icons"> delete </span> </td>
     <!-- <td>{{ recepie.categorie }}</td>
     <td>{{ recepie.diet }}</td>
     <td>{{ recepie.difficulty }}</td>
@@ -59,3 +63,5 @@
 <p>
   <a href="/add-new-recepie" class="btn btn-primaer btn-lg btn-add" role="button" aria-disabled="true"><span class="material-icons"> add </span></a>
 </p>
+
+</div>
