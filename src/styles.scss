@@ -207,6 +207,7 @@ header{
 
 .Filterung {
   display: inline-flex;
+  float: left;
 }
 
 .Filterung a.btn.btn-lg {
@@ -215,17 +216,25 @@ header{
   margin-right: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  color: $orange;
-  border: 1px solid $orange;
-
+  color: white;
+  border: 1px solid $schriftfarbe;
+  background-color: $schriftfarbe;
 }
 .Filterung span.material-icons {
   padding-right: 8px;
 }
+.btn-active {
+  background-color: $orange !important;
+  border: 1px solid $orange !important;
+}
+.Filterung a.btn.btn-lg:hover {
+  background-color: $orange;
+  border: 1px solid $orange;
+}
 
 
 .rezeptuebersicht {
-  margin-top: 10px;
+  margin-top: 60px;
   text-align: left;
 }
 
@@ -236,6 +245,46 @@ header{
 .display {
   /*display:*/
 }
+
+td.icon-box {
+  text-align: center;
+}
+td.icon-box-fav {
+  background-color: #ccc7c7 !important;
+}
+td.icon-box-edit {
+  background-color: #8b8585 !important;
+}
+td.icon-box-del {
+  background-color: #d54b4b !important;
+}
+td.icon-box a {
+  color: $schriftfarbe;
+}
+
+
+
+/* Neues Rezept & Rezept bearbeiten - Seite */
+input.rezepttitel {
+  padding-left: 0px;
+}
+.form-control.rezeptinhalt {
+  border:none;
+  background-color: rgba(255, 255, 255, 0);
+}
+.rezeptinhalte-box {
+  display: flex;
+  min-height: 50px;
+  background-color: #f3f2f2;
+  border-radius: 20px;
+  color: $schriftfarbe;
+}/*
+.form-field.rezeptinhalte-box input {
+  width: 50%;
+}*/
+
+
+
 
 
 

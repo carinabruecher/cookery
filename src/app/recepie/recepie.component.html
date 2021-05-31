@@ -40,9 +40,9 @@
   <tr *ngFor="let recepie of Recepies; let i = index">
     <!-- <th scope="row">{{ i + 1 }}</th> -->
     <td>{{ recepie.recepietitle }}</td>
-    <td class="displayNone"> <span class="material-icons"> favorite_border </span> </td>
-    <td class="displayNone"> <a href="/edit-recepie"><span class="material-icons"> create </span></a> </td>
-    <td class="displayNone"> <span class="material-icons"> delete </span> </td>
+    <td class="displayNone icon-box icon-box-fav"> <span class="material-icons"> favorite_border </span> </td>
+    <td class="displayNone icon-box icon-box-edit"> <a href="/edit-recepie"><span class="material-icons"> create </span></a> </td>
+    <td class="displayNone icon-box icon-box-del"> <span class="material-icons"> delete </span> </td>
     <!-- <td>{{ recepie.categorie }}</td>
     <td>{{ recepie.diet }}</td>
     <td>{{ recepie.difficulty }}</td>
