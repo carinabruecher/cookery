@@ -273,15 +273,25 @@ input.rezepttitel {
   background-color: rgba(255, 255, 255, 0);
 }
 .rezeptinhalte-box {
-  display: flex;
-  min-height: 50px;
   background-color: #f3f2f2;
   border-radius: 20px;
   color: $schriftfarbe;
-}/*
-.form-field.rezeptinhalte-box input {
-  width: 50%;
-}*/
+  text-align: left;
+}
+.displayFlex {
+  display: flex;
+  min-height: 50px;
+}
+.icon-positionierung {
+  margin-top: 11px;
+  padding-left: 12px;
+}
+
+
+.row.head-zeile {
+  margin-top: 20px;
+  color: $orange;
+}
 
 
 
