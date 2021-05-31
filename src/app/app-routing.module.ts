@@ -24,7 +24,8 @@ const routes: Routes = [
   { path: 'regestrieren', component: SignUpComponent},
   { path: 'passwortzurücksetzen', component: PasswordResetComponent},
   { path: 'userMgmt', component: UserManagementComponent},
-  { path: 'verifyMail', component: VerifyMailComponent}
+  { path: 'verifyMail', component: VerifyMailComponent},
+  { path: 'add-new-recepie', component: AddNewRecepieComponent}
 ];
 
 @NgModule({

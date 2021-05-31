@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +23,8 @@ import { PasswordResetComponent } from './password-reset/password-reset.componen
 import { UserManagementComponent } from './user-management/user-management.component';
 import { PasswordStrengthMeterModule } from 'angular-password-strength-meter';
 import { VerifyMailComponent } from './verify-mail/verify-mail.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AddNewRecepieComponent } from './add-new-recepie/add-new-recepie.component';
 
 
 @NgModule({
@@ -36,12 +38,14 @@ import { VerifyMailComponent } from './verify-mail/verify-mail.component';
     SignUpComponent,
     PasswordResetComponent,
     UserManagementComponent,
-    VerifyMailComponent
+    VerifyMailComponent,
+    AddNewRecepieComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
@@ -52,6 +56,9 @@ import { VerifyMailComponent } from './verify-mail/verify-mail.component';
     AngularFireAuthModule,
     AngularFirestoreModule,
     PasswordStrengthMeterModule,
+    NgbModule
+    
+  
   ],
   providers: [FirebaseService],
   bootstrap: [AppComponent]

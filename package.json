@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "~11.2.12",
     "@angular/router": "~11.2.12",
     "@angular/service-worker": "~11.2.12",
+    "@ng-bootstrap/ng-bootstrap": "^9.1.1",
     "angular-password-strength-meter": "^3.0.1",
     "angularfire2": "^5.4.2",
     "bootstrap": "^5.0.1",
