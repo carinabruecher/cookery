@@ -17,10 +17,11 @@ import { EditRecepieComponent } from './edit-recepie/edit-recepie.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
-  { path: 'list', component: ListComponent, canActivate: [AuthGuard]},
-  { path: 'plan', component: PlanComponent, canActivate: [AuthGuard]},
-  { path: 'rezept', component: RecepieComponent, canActivate: [AuthGuard]},
+  /*{ path: 'home', component: HomeComponent, canActivate: [AuthGuard]},*/
+  { path: 'home', component: HomeComponent},
+  { path: 'list', component: ListComponent},
+  { path: 'plan', component: PlanComponent},
+  { path: 'rezept', component: RecepieComponent},
   { path: 'anmelden', component: SignInComponent},
   { path: 'regestrieren', component: SignUpComponent},
   { path: 'passwortzurücksetzen', component: PasswordResetComponent},

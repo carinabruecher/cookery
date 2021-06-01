@@ -196,6 +196,24 @@ header{
   background-color: $orange-h;
   color: white;
 }
+/* Rezept Bereich */
+.btn.btn-rezept {
+  background-color: $orange;
+  color: white;
+}
+.btn.btn-rezept:hover {
+  background-color: $orange-h;
+  color: white;
+}
+/* Einkaufsliste Bereich */
+.btn.btn-einkauf {
+  background-color: $green;
+  color: white;
+}
+.btn.btn-einkauf:hover {
+  background-color: $green-h;
+  color: white;
+}
 .btn-add {
   position: absolute;
   bottom: 10px;
@@ -276,11 +294,15 @@ td.icon-box a {
 
 /* ------------ N E U E S  R E Z E P T  &  R E Z E P T  B E A R B E I T E N - S E I T E ------------ */
 
+input:focus {
+  background-color: rgba(255,255,255,0);
+}
+
 input.rezepttitel {
   padding-left: 0px;
 }
 .form-control.rezeptinhalt {
-  border:none;
+  border: none;
   background-color: rgba(255, 255, 255, 0);
 }
 .rezeptinhalte-box {
@@ -297,11 +319,42 @@ input.rezepttitel {
   margin-top: 11px;
   padding-left: 12px;
 }
+.custom-select {
+  width: 100%;
+  border: none !important;
+  border-radius: 20px;
+  background-color: transparent;
+  color: $schriftfarbe;
+}
+.custom-select:focus {
+  outline: none;
+  border: none;
+}
+.custom-select:hover, .custom-select:focus, select:hover {
+  border: none;
+}
+
+
 
 
 .row.head-zeile {
   margin-top: 20px;
   color: $orange;
+}
+
+
+
+/* ------------ E I N K A U F S L I S T E ------------ */
+
+.box-discounter {
+  background-color: $green;
+  border-radius: 20px;
+  color: white;
+  margin: 20px 30px;
+  padding: 40px 0px;
+}
+.box-discounter:hover {
+  background-color: $green-h;
 }
 
 
