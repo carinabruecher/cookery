@@ -14,8 +14,17 @@
   <span class="material-icons"> menu_book </span> Alle</a>
 <a href="" class="btn btn-lg" role="button" aria-disabled="true">
   <span class="material-icons"> favorite_border </span> Favoriten</a>
-<a href="" class="btn btn-lg" role="button" aria-disabled="true">
-  <span class="material-icons"> schedule </span> Zubereitungszeit</a>
+<button class="btn btn-filter btn-lg" role="button" aria-disabled="true">
+  <!-- <span class="material-icons"> schedule </span> Zubereitungszeit</a> -->
+  <div class="input-group fitContent">
+    <select class="custom-select schriftWeiss">
+      <span class="material-icons"> schedule </span> <option selected>Zubereitungszeit</option>
+      <option value="normal">normal</option>
+      <option value="vegetarisch">vegetarisch</option>
+      <option value="vegan">vegan</option>
+      <option value="low carb">low carb</option>
+    </select>
+  </div></button>
 <a href="" class="btn btn-lg" role="button" aria-disabled="true">
   <span class="material-icons"> restaurant </span> Kategorie</a>
   <a href="" class="btn btn-lg" role="button" aria-disabled="true">
@@ -23,6 +32,8 @@
 <a href="" class="btn btn-lg" role="button" aria-disabled="true">
   <span class="material-icons"> expand </span> Schwierigkeitsgrad</a>
 </div>
+
+
 
 
 <table class="table rezeptuebersicht">

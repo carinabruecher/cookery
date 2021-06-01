@@ -259,12 +259,27 @@ header{
   background-color: $orange;
   border: 1px solid $orange;
 }
+.btn.btn-filter {
+  background-color: $schriftfarbe;
+}
 
 
 .rezeptuebersicht {
   margin-top: 60px;
   text-align: left;
 }
+
+.schriftWeiss {
+  color: white !important;
+}
+
+/* dropdown menu dunkel machen */
+option {
+  background-color: $schriftfarbe;
+  border: none;
+  box-shadow: none;
+}
+
 
 /*
 .displayNone {
@@ -304,6 +319,12 @@ input.rezepttitel {
 .form-control.rezeptinhalt {
   border: none;
   background-color: rgba(255, 255, 255, 0);
+  outline: none;
+}
+.form-control.rezeptinhalt:focus, input:focus, textarea:focus {
+  border: none;
+  background-color: transparent;
+  outline: none;
 }
 .rezeptinhalte-box {
   background-color: #f3f2f2;
@@ -332,6 +353,9 @@ input.rezepttitel {
 }
 .custom-select:hover, .custom-select:focus, select:hover {
   border: none;
+}
+.input-group.fitContent {
+  width: max-content !important;
 }
 
 
