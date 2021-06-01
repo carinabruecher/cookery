@@ -1,63 +1,63 @@
 <div class class="main-wrapper">
-<div class="container">
-  <div class="row head-zeile">
-    <div class="col">
-      <a href="/rezept"><span class="material-icons form-dark"> close </span></a>
-    </div>
-    <div class="col">
-      <p style="margin: 0 auto">Rezept bearbeiten</p>
-    </div>
-    <div class="col">
-      <button class="btn" (click)="save()" style="padding-top:0 !important; color: #FFAA00">
-        <span class="material-icons form-dark" style="float: right"> done </span>
-      </button>
+  <div class="container">
+    <div class="row head-zeile">
+      <div class="col">
+        <a href="/rezept"><span class="material-icons form-dark"> close </span></a>
+      </div>
+      <div class="col">
+        <p style="margin: 0 auto">Rezept bearbeiten</p>
+      </div>
+      <div class="col">
+        <button class="btn" (click)="save()" style="padding-top:0 !important; color: #FFAA00">
+          <span class="material-icons form-dark" style="float: right"> done </span>
+        </button>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="form-field">
-  <input type="text" class="form-control rezeptinhalt rezepttitel" placeholder="Rezepttitel" [(ngModel)]="item.recepietitle">
-</div>
+  <div class="form-field">
+    <input type="text" class="form-control rezeptinhalt rezepttitel" placeholder="Rezepttitel" [(ngModel)]="item.recepietitle">
+  </div>
 
-<div class="form-field">
-  <!-- <span class="material-icons form-dark"> photo_camera </span> -->
-  <input type="file" class="form-control" placeholder="Foto hinzufügen" [(ngModel)]="item.picture">
-</div>
+  <div class="form-field">
+    <!-- <span class="material-icons form-dark"> photo_camera </span> -->
+    <input type="file" class="form-control" placeholder="Foto hinzufügen" [(ngModel)]="item.picture">
+  </div>
 
-<div class="form-field rezeptinhalte-box displayFlex">
-  <span class="material-icons form-dark icon-positionierung"> restaurant </span>
-  <input type="text" class="form-control rezeptinhalt" placeholder="Kategorie" [(ngModel)]="item.categorie">
-</div>
+  <div class="form-field rezeptinhalte-box displayFlex">
+    <span class="material-icons form-dark icon-positionierung"> restaurant </span>
+    <input type="text" class="form-control rezeptinhalt" placeholder="Kategorie" [(ngModel)]="item.categorie">
+  </div>
 
-<div class="form-field rezeptinhalte-box displayFlex">
-  <span class="material-icons form-dark icon-positionierung"> restaurant_menu </span>
-  <input type="text" class="form-control rezeptinhalt" placeholder="Ernährungsform" [(ngModel)]="item.diet">
-</div>
+  <div class="form-field rezeptinhalte-box displayFlex">
+    <span class="material-icons form-dark icon-positionierung"> restaurant_menu </span>
+    <input type="text" class="form-control rezeptinhalt" placeholder="Ernährungsform" [(ngModel)]="item.diet">
+  </div>
 
-<div class="form-field rezeptinhalte-box">
-  <span class="material-icons form-dark icon-positionierung"> shopping_cart </span> Zutaten für 2 Portionen <br>
-  <textarea type="text" class="form-control rezeptinhalt" rows="5" placeholder="Datenbank auslesen" [(ngModel)]="item.ingredients"></textarea>
-</div>
+  <div class="form-field rezeptinhalte-box">
+    <span class="material-icons form-dark icon-positionierung"> shopping_cart </span> Zutaten für 2 Portionen <br>
+    <textarea type="text" class="form-control rezeptinhalt" rows="5" placeholder="Datenbank auslesen" [(ngModel)]="item.ingredients"></textarea>
+  </div>
 
-<div class="form-field rezeptinhalte-box">
-  <span class="material-icons form-dark icon-positionierung"> format_list_bulleted </span> Zubereitung <br>
-  <input type="text" class="form-control rezeptinhalt" placeholder="Datenbank auslesen" [(ngModel)]="item.preparation" style="display: block;">
-</div>
+  <div class="form-field rezeptinhalte-box">
+    <span class="material-icons form-dark icon-positionierung"> format_list_bulleted </span> Zubereitung <br>
+    <input type="text" class="form-control rezeptinhalt" placeholder="Datenbank auslesen" [(ngModel)]="item.preparation" style="display: block;">
+  </div>
 
-<div class="form-field rezeptinhalte-box displayFlex">
-  <span class="material-icons form-dark icon-positionierung"> local_fire_department </span>
-  <input type="text" class="form-control rezeptinhalt" placeholder="Nährwerte" [(ngModel)]="item.nutrition">
-</div>
+  <div class="form-field rezeptinhalte-box displayFlex">
+    <span class="material-icons form-dark icon-positionierung"> local_fire_department </span>
+    <input type="text" class="form-control rezeptinhalt" placeholder="Nährwerte" [(ngModel)]="item.nutrition">
+  </div>
 
-<div class="form-field rezeptinhalte-box displayFlex">
-  <span class="material-icons form-dark icon-positionierung"> schedule </span>
-  <input type="text" class="form-control rezeptinhalt" placeholder="Zubereitungszeit" [(ngModel)]="item.time">
-</div>
+  <div class="form-field rezeptinhalte-box displayFlex">
+    <span class="material-icons form-dark icon-positionierung"> schedule </span>
+    <input type="text" class="form-control rezeptinhalt" placeholder="Zubereitungszeit" [(ngModel)]="item.time">
+  </div>
 
-<div class="form-field rezeptinhalte-box displayFlex">
-  <span class="material-icons form-dark icon-positionierung"> expand </span>
-  <input type="text" class="form-control rezeptinhalt" placeholder="Schwierigkeitsgrad" [(ngModel)]="item.difficulty">
-</div>
+  <div class="form-field rezeptinhalte-box displayFlex">
+    <span class="material-icons form-dark icon-positionierung"> expand </span>
+    <input type="text" class="form-control rezeptinhalt" placeholder="Schwierigkeitsgrad" [(ngModel)]="item.difficulty">
+  </div>
 
 </div>
 
