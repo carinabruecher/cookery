@@ -71,12 +71,26 @@
     <textarea type="text" class="form-control rezeptinhalt" placeholder="{{ recepie.preparation }}" [(ngModel)]="item.preparation" style="display: block;"></textarea>
   </div>
 
-  <div class="form-field rezeptinhalte-box displayFlex">
-    <span class="material-icons form-dark icon-positionierung"> local_fire_department </span>
-    <input type="text" class="form-control rezeptinhalt" placeholder="{{ recepie.nutrition }}" [(ngModel)]="item.nutrition">
-    <input type="text" class="form-control rezeptinhalt" placeholder="{{ recepie.nutrition }}">
-    <input type="text" class="form-control rezeptinhalt" placeholder="{{ recepie.nutrition }}">
-    <input type="text" class="form-control rezeptinhalt" placeholder="{{ recepie.nutrition }}">
+  <div class="form-field rezeptinhalte-box">
+    <span class="material-icons form-dark icon-positionierung"> local_fire_department </span> Nährwerte <br>
+    <table>
+      <tr>
+        <td>Kalorien: </td>
+        <td><input type="text" class="form-control rezeptinhalt" placeholder="Kalorien" [(ngModel)]="item.nutrition"></td>
+      </tr>
+      <tr>
+        <td>Eiweiß: </td>
+        <td><input type="text" class="form-control rezeptinhalt" placeholder="Eiweiß"></td>
+      </tr>
+      <tr>
+        <td>Fett: </td>
+        <td><input type="text" class="form-control rezeptinhalt" placeholder="Fett"></td>
+      </tr>
+      <tr>
+        <td>Kohlenhydrate: </td>
+        <td><input type="text" class="form-control rezeptinhalt" placeholder="Kohlenhydrate"></td>
+      </tr>
+    </table>
   </div>
 
   <div class="form-field rezeptinhalte-box displayFlex">
