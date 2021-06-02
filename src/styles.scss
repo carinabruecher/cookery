@@ -196,6 +196,24 @@ header{
   background-color: $orange-h;
   color: white;
 }
+/* Rezept Bereich */
+.btn.btn-rezept {
+  background-color: $orange;
+  color: white;
+}
+.btn.btn-rezept:hover {
+  background-color: $orange-h;
+  color: white;
+}
+/* Einkaufsliste Bereich */
+.btn.btn-einkauf {
+  background-color: $green;
+  color: white;
+}
+.btn.btn-einkauf:hover {
+  background-color: $green-h;
+  color: white;
+}
 .btn-add {
   position: absolute;
   bottom: 10px;
@@ -205,8 +223,19 @@ header{
 
 
 
+
+/* ------------------------ R E Z E P T  Ü B E R S I C H T ------------------------ */
+
+.icon-lupe {
+  margin-top: 6px;
+  padding-left: 10px;
+  color: #ced4da;
+}
+
+
 .Filterung {
   display: inline-flex;
+  float: left;
 }
 
 .Filterung a.btn.btn-lg {
@@ -215,13 +244,145 @@ header{
   margin-right: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  color: $orange;
-  border: 1px solid $orange;
-
+  color: white;
+  border: 1px solid $schriftfarbe;
+  background-color: $schriftfarbe;
 }
 .Filterung span.material-icons {
   padding-right: 8px;
 }
+.btn-active {
+  background-color: $orange !important;
+  border: 1px solid $orange !important;
+}
+.Filterung a.btn.btn-lg:hover {
+  background-color: $orange;
+  border: 1px solid $orange;
+}
+.btn.btn-filter {
+  background-color: $schriftfarbe;
+}
+
+
+.rezeptuebersicht {
+  margin-top: 60px;
+  text-align: left;
+}
+
+.schriftWeiss {
+  color: white !important;
+}
+
+/* dropdown menu dunkel machen */
+option {
+  background-color: $schriftfarbe;
+  border: none;
+  box-shadow: none;
+}
+
+
+/*
+.displayNone {
+  display:none;
+}*/
+.display {
+  /*display:*/
+}
+
+td.icon-box {
+  text-align: center;
+}
+td.icon-box-fav {
+  background-color: #ccc7c7 !important;
+}
+td.icon-box-edit {
+  background-color: #8b8585 !important;
+}
+td.icon-box-del {
+  background-color: #d54b4b !important;
+}
+td.icon-box a {
+  color: $schriftfarbe;
+}
+
+
+
+/* ------------ N E U E S  R E Z E P T  &  R E Z E P T  B E A R B E I T E N - S E I T E ------------ */
+
+input:focus {
+  background-color: rgba(255,255,255,0);
+}
+
+input.rezepttitel {
+  padding-left: 0px;
+}
+.form-control.rezeptinhalt {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  outline: none;
+}
+.form-control.rezeptinhalt:focus, input:focus, textarea:focus {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.rezeptinhalte-box {
+  background-color: #f3f2f2;
+  border-radius: 20px;
+  color: $schriftfarbe;
+  text-align: left;
+}
+.displayFlex {
+  display: flex;
+  min-height: 50px;
+}
+.icon-positionierung {
+  margin-top: 11px;
+  padding-left: 12px;
+}
+.custom-select {
+  width: 100%;
+  border: none !important;
+  border-radius: 20px;
+  background-color: transparent;
+  color: $schriftfarbe;
+}
+.custom-select:focus {
+  outline: none;
+  border: none;
+}
+.custom-select:hover, .custom-select:focus, select:hover {
+  border: none;
+}
+.input-group.fitContent {
+  width: max-content !important;
+}
+
+
+
+
+.row.head-zeile {
+  margin-top: 20px;
+  color: $orange;
+}
+
+
+
+/* ------------ E I N K A U F S L I S T E ------------ */
+
+.box-discounter {
+  background-color: $green;
+  border-radius: 20px;
+  color: white;
+  margin: 20px 30px;
+  padding: 40px 0px;
+}
+.box-discounter:hover {
+  background-color: $green-h;
+}
+
+
+
 
 
 
@@ -255,47 +416,10 @@ $d-background-color: #0D0D0D;
 
 
 
-/* ------------------------- N A V B A R ------------------------- */
-.navbar {
-  border-top: 3px solid $orange;
-  max-width: 414px;
-  margin: auto;
-  text-align: center;
-}
-.navbar > .container {
-  justify-content: center !important;
-}
-
-
-.material-icons.md-36{
-  font-size: 36px;
-}
-
-
-.row > * {
-  padding-left: 1.1em !important;
-  padding-right: 1.1em !important;
-}
-
-
-
 
 @media only screen and (max-width: 415px) {
-  .material-icons.md-48{
+  .material-icons.md-36{
     font-size: 36px;
-  }
-
-  .row > * {
-    width: auto !important;
-    max-width: auto !important;
-    padding: auto !important;
-  }
-}
-
-@media only screen and (max-width: 321px) {
-  .row > * {
-    padding-left: 0.8em !important;
-    padding-right: 0.8em !important;
   }
 }
 
