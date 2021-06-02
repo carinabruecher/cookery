@@ -474,8 +474,26 @@ $d-background-color: #0D0D0D;
   }
 }
 
+$violet: #60339F;
 
 .bg-orange {
   background-color: $orange;
-  color: white;
+}
+.bg-green {
+  background-color: $green;
+}
+.bg-blue {
+  background-color: $blue;
+}
+.bg-violet {
+  background-color: $violet;
+}
+
+
+.icon-dark {
+  color: $schriftfarbe;
+}
+
+.cookery-navbar .container .row .col-sm {
+  padding: 10px 0px;
 }
