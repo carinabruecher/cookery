@@ -226,6 +226,10 @@ header{
 
 /* ------------------------ R E Z E P T  Ü B E R S I C H T ------------------------ */
 
+
+$gray: #f3f2f2;
+
+
 .icon-lupe {
   margin-top: 6px;
   padding-left: 10px;
@@ -236,17 +240,16 @@ header{
 .Filterung {
   display: inline-flex;
   float: left;
+  max-width: 100%;
+  overflow: scroll;
 }
 
-.Filterung a.btn.btn-lg {
+.Filterung a.btn.btn-lg, .Filterung button.btn.btn-lg {
   display: inline-flex;
-  overflow: hidden;
   margin-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: white;
-  border: 1px solid $schriftfarbe;
-  background-color: $schriftfarbe;
+  padding: 10px 20px !important;
+  border: 1px solid $gray;
+  background-color: $gray;
 }
 .Filterung span.material-icons {
   padding-right: 8px;
@@ -255,12 +258,15 @@ header{
   background-color: $orange !important;
   border: 1px solid $orange !important;
 }
-.Filterung a.btn.btn-lg:hover {
+.Filterung a.btn.btn-lg:hover, .Filterung button.btn.btn-filter.btn-lg:hover {
   background-color: $orange;
   border: 1px solid $orange;
+  color: white;
 }
+
 .btn.btn-filter {
-  background-color: $schriftfarbe;
+  background-color: $gray;
+  border: 1px solid $gray;
 }
 
 
@@ -269,13 +275,9 @@ header{
   text-align: left;
 }
 
-.schriftWeiss {
-  color: white !important;
-}
-
-/* dropdown menu dunkel machen */
+/* dropdown menu hintergrundfarbe */
 option {
-  background-color: $schriftfarbe;
+  background-color: $gray;
   border: none;
   box-shadow: none;
 }
