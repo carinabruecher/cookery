@@ -244,11 +244,10 @@ $gray: #f3f2f2;
   overflow: scroll;
 }
 
-.Filterung a.btn.btn-lg {
+.Filterung a.btn.btn-lg, .Filterung button.btn.btn-lg {
   display: inline-flex;
   margin-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 20px !important;
   border: 1px solid $gray;
   background-color: $gray;
 }
