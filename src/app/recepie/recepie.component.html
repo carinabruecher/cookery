@@ -10,27 +10,58 @@
 
 
 <div class="Filterung">
+
 <a href="" class="btn btn-lg" role="button" aria-disabled="true">
   <span class="material-icons"> menu_book </span> Alle</a>
+
 <a href="" class="btn btn-lg" role="button" aria-disabled="true">
   <span class="material-icons"> favorite_border </span> Favoriten</a>
+
 <button class="btn btn-filter btn-lg" role="button" aria-disabled="true">
-  <!-- <span class="material-icons"> schedule </span> Zubereitungszeit</a> -->
   <div class="input-group fitContent">
-    <select class="custom-select schriftWeiss">
+    <select class="custom-select">
       <span class="material-icons"> schedule </span> <option selected>Zubereitungszeit</option>
-      <option value="normal">normal</option>
-      <option value="vegetarisch">vegetarisch</option>
-      <option value="vegan">vegan</option>
-      <option value="low carb">low carb</option>
+      <option value="30">&lt; 30 Minuten</option>
+      <option value="30-60">30-60 Minuten</option>
+      <option value="60">&gt; 60 Minuten</option>
     </select>
   </div></button>
-<a href="" class="btn btn-lg" role="button" aria-disabled="true">
-  <span class="material-icons"> restaurant </span> Kategorie</a>
-  <a href="" class="btn btn-lg" role="button" aria-disabled="true">
-    <span class="material-icons"> expand </span> Ernährungsform</a>
-<a href="" class="btn btn-lg" role="button" aria-disabled="true">
-  <span class="material-icons"> expand </span> Schwierigkeitsgrad</a>
+
+<button class="btn btn-filter btn-lg" role="button" aria-disabled="true">
+  <div class="input-group fitContent">
+    <select class="custom-select">
+      <span class="material-icons"> restaurant </span> <option selected>Kategorie</option>
+      <option value="Pizza">Pizza</option>
+        <option value="Pasta">Pasta</option>
+        <option value="Fleisch">Fleisch</option>
+        <option value="Fisch">Fisch</option>
+        <option value="Suppe">Suppe</option>
+        <option value="Salat">Salat</option>
+        <option value="Vorspeise">Vorspeise</option>
+        <option value="Nachspeise">Nachspeise</option>
+    </select>
+  </div></button>
+
+  <button class="btn btn-filter btn-lg" role="button" aria-disabled="true">
+    <div class="input-group fitContent">
+      <select class="custom-select schriftGrau">
+        <span class="material-icons"> expand </span> <option selected>Ernährungsform</option>
+        <option value="normal">normal</option>
+        <option value="vegetarisch">vegetarisch</option>
+        <option value="vegan">vegan</option>
+        <option value="low carb">low carb</option>
+      </select>
+    </div></button>
+
+<button class="btn btn-filter btn-lg" role="button" aria-disabled="true">
+  <div class="input-group fitContent">
+    <select class="custom-select schriftGrau">
+      <span class="material-icons"> expand </span> <option selected>Schwierigkeitsgrad</option>
+      <option value="leicht">leicht</option>
+      <option value="mittel">mittel</option>
+      <option value="schwer">schwer</option>
+    </select>
+  </div></button>
 </div>
 
 
