@@ -436,13 +436,14 @@ $d-background-color: #0D0D0D;
 
 /* ------------------------- N A V B A R ------------------------- */
 .cookery-navbar {
+  position: fixed;
+  bottom:0;
   border-top: 3px solid $orange;
+  width:100%;
   max-width: 414px;
   margin: auto;
   text-align: center;
-}
-.cookery-navbar > .container {
-  justify-content: center !important;
+  background-color: white;
 }
 
 
