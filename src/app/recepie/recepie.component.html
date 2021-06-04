@@ -12,15 +12,15 @@
 <div class="Filterung">
 
 <a href="" class="btn btn-lg" role="button" aria-disabled="true">
-  <span class="material-icons"> menu_book </span> Alle</a>
+  <span (click)="getAll()" class="material-icons"> menu_book </span> Alle</a>
 
 <a href="" class="btn btn-lg" role="button" aria-disabled="true">
   <span class="material-icons"> favorite_border </span> Favoriten</a>
 
 <button class="btn btn-filter btn-lg" role="button" aria-disabled="true">
   <div class="input-group fitContent">
-    <select class="custom-select">
-      <span class="material-icons"> schedule </span> <option selected>Zubereitungszeit</option>
+    <select class="custom-select" [(ngModel)]="chosenTime" (ngModelChange)="getTime()">
+      <span class="material-icons"> schedule </span> <option value="Zubereitungszeit" selected>Zubereitungszeit</option>
       <option value="30">&lt; 30 Minuten</option>
       <option value="30-60">30-60 Minuten</option>
       <option value="60">&gt; 60 Minuten</option>
@@ -29,8 +29,8 @@
 
 <button class="btn btn-filter btn-lg" role="button" aria-disabled="true">
   <div class="input-group fitContent">
-    <select class="custom-select">
-      <span class="material-icons"> restaurant </span> <option selected>Kategorie</option>
+    <select class="custom-select" [(ngModel)]="chosenCategorie" (ngModelChange)="getCategorie()">
+      <span class="material-icons"> restaurant </span> <option value="Kategorie" selected>Kategorie</option>
       <option value="Pizza">Pizza</option>
         <option value="Pasta">Pasta</option>
         <option value="Fleisch">Fleisch</option>
@@ -44,8 +44,8 @@
 
   <button class="btn btn-filter btn-lg" role="button" aria-disabled="true">
     <div class="input-group fitContent">
-      <select class="custom-select schriftGrau">
-        <span class="material-icons"> expand </span> <option selected>Ernährungsform</option>
+      <select class="custom-select schriftGrau" [(ngModel)]="chosenDiet" (ngModelChange)="getDiet()">
+        <span class="material-icons"> expand </span> <option value="Ernährungsform" selected>Ernährungsform</option>
         <option value="normal">normal</option>
         <option value="vegetarisch">vegetarisch</option>
         <option value="vegan">vegan</option>
@@ -55,8 +55,8 @@
 
 <button class="btn btn-filter btn-lg" role="button" aria-disabled="true">
   <div class="input-group fitContent">
-    <select class="custom-select schriftGrau">
-      <span class="material-icons"> expand </span> <option selected>Schwierigkeitsgrad</option>
+    <select class="custom-select schriftGrau" [(ngModel)]="chosenDifficulty" (ngModelChange)="getDifficulty()">
+      <span class="material-icons"> expand </span> <option value="Schwierigkeitsgrad" selected>Schwierigkeitsgrad</option>
       <option value="leicht">leicht</option>
       <option value="mittel">mittel</option>
       <option value="schwer">schwer</option>
