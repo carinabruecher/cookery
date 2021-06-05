@@ -458,6 +458,48 @@ $d-background-color: #0D0D0D;
 }
 
 
+
+/* ------------ E I N K A U F S L I S T E ------------ */
+input.EK-item-bez {
+  max-width: 150px;
+  border: 0px solid #fff;
+}
+input.EK-item-number, input.EK-item-number:focus {
+  max-width: 50px;
+  border: 1px solid rgb(228, 228, 228);
+  border-radius: 10px;
+}
+.material-icons.md-26{
+  font-size: 26px;
+}
+
+
+
+
+/* ------------ E S S E N S P L A N ------------ */
+
+.container.BoxVonTag {
+  background-color: $gray;
+  border-radius: 20px;
+  margin-bottom: 0.5em;
+}
+.col-sm-2.rightbounded {
+  text-align: right;
+}
+.col-sm-8.leftbounded {
+  text-align: left;
+}
+.material-icons.md-20{
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 415px) {
   .material-icons.md-48{
     font-size: 36px;
