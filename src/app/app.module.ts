@@ -26,6 +26,7 @@ import { VerifyMailComponent } from './verify-mail/verify-mail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddNewRecepieComponent } from './add-new-recepie/add-new-recepie.component';
 import { EditRecepieComponent } from './edit-recepie/edit-recepie.component';
+import { EkDetaillistComponent } from './ek-detaillist/ek-detaillist.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { EditRecepieComponent } from './edit-recepie/edit-recepie.component';
     UserManagementComponent,
     VerifyMailComponent,
     AddNewRecepieComponent,
-    EditRecepieComponent
+    EditRecepieComponent,
+    EkDetaillistComponent
   ],
   imports: [
     BrowserModule,
