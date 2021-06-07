@@ -28,7 +28,8 @@ const routes: Routes = [
   { path: 'userMgmt', component: UserManagementComponent},
   { path: 'verifyMail', component: VerifyMailComponent},
   { path: 'add-new-recepie', component: AddNewRecepieComponent},
-  { path: 'edit-recepie', component: EditRecepieComponent}
+  { path: 'edit-recepie/:id', component: EditRecepieComponent }
+
 ];
 
 @NgModule({

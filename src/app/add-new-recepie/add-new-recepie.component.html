@@ -19,16 +19,16 @@
   <input type="text" class="form-control rezeptinhalt rezepttitel" placeholder="Rezepttitel" [(ngModel)]="item.recepietitle">
 </div>
 
-<div class="form-field">
-  <!-- <span class="material-icons form-dark"> photo_camera </span> -->
-  <input type="file" class="form-control" placeholder="Foto hinzufügen" [(ngModel)]="item.picture">
-</div>
+  <!--<div class="form-field">
+     <span class="material-icons form-dark"> photo_camera </span> -->
+  <!--<input type="file" class="form-control" placeholder="Foto hinzufügen" [(ngModel)]="item.picture">
+</div> -->
 
 <div class="form-field rezeptinhalte-box displayFlex">
   <span class="material-icons form-dark icon-positionierung"> restaurant </span>
   <!-- <input type="text" class="form-control rezeptinhalt" placeholder="Kategorie" [(ngModel)]="item.categorie"> -->
   <div class="input-group">
-    <select class="custom-select" id="inputGroupSelect04">
+    <select class="custom-select" [(ngModel)]="item.categorie">
       <option selected>Wähle eine Kategorie...</option>
       <option value="Pizza">Pizza</option>
       <option value="Pasta">Pasta</option>
@@ -46,7 +46,7 @@
   <span class="material-icons form-dark icon-positionierung"> restaurant_menu </span>
   <!-- <input type="text" class="form-control rezeptinhalt" placeholder="Ernährungsform" [(ngModel)]="item.diet"> -->
   <div class="input-group">
-    <select class="custom-select" id="inputGroupSelect04">
+    <select class="custom-select" [(ngModel)]="item.diet">
       <option selected>Wähle eine Ernährungsform...</option>
       <option value="normal">normal</option>
       <option value="vegetarisch">vegetarisch</option>
@@ -92,7 +92,7 @@
   <span class="material-icons form-dark icon-positionierung"> schedule </span>
   <!-- <input type="text" class="form-control rezeptinhalt" placeholder="Zubereitungszeit" [(ngModel)]="item.time"> -->
   <div class="input-group">
-    <select class="custom-select" id="inputGroupSelect04">
+    <select class="custom-select" [(ngModel)]="item.time">
       <option selected>Wähle die Zubereitungszeit...</option>
       <option value="30">&lt; 30 Minuten</option>
       <option value="3060">30-60 Minuten</option>
@@ -105,7 +105,7 @@
   <span class="material-icons form-dark icon-positionierung"> expand </span>
   <!-- <input type="text" class="form-control rezeptinhalt" placeholder="Schwierigkeitsgrad" [(ngModel)]="item.difficulty"> -->
   <div class="input-group">
-    <select class="custom-select" id="inputGroupSelect04">
+    <select class="custom-select" [(ngModel)]="item.difficulty">
       <option selected>Wähle den Schwierigkeitsgrad...</option>
       <option value="leicht">leicht</option>
       <option value="mittel">mittel</option>

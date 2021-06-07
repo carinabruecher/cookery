@@ -1,66 +1,45 @@
 <div class class="main-wrapper">
-  <div class="container">
-    <div class="row head-zeile">
-      <div class="col">
-        <a href="/rezept"><span class="material-icons form-dark"> close </span></a>
-      </div>
-      <div class="col">
-        <p style="margin: 0 auto">Rezept bearbeiten</p>
-      </div>
-      <div class="col">
-        <button class="btn" (click)="save()" style="padding-top:0 !important; color: #FFAA00">
-          <span class="material-icons form-dark" style="float: right"> done </span>
-        </button>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="container">
+      <div class="row head-zeile">
+        <div class="col">
+          <a href="/rezept"><span class="material-icons form-dark"> close </span></a>
+        </div>
+        <div class="col">
+          <p style="margin: 0 auto">Rezept bearbeiten</p>
+        </div>
+        <div class="col">
+          <button class="btn" type="submit" style="padding-top:0 !important; color: #FFAA00">
+            <span class="material-icons form-dark" style="float: right"> done </span>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="form-field">
-    <input type="text" class="form-control rezeptinhalt rezepttitel" placeholder="Rezepttitel" [(ngModel)]="item.recepietitle">
-  </div>
-
-  <div class="form-field">
-    <!-- <span class="material-icons form-dark"> photo_camera </span> -->
-    <input type="file" class="form-control" placeholder="Foto hinzufügen" [(ngModel)]="item.picture">
-  </div>
-
-  <div class="form-field rezeptinhalte-box displayFlex">
-    <span class="material-icons form-dark icon-positionierung"> restaurant </span>
-    <!-- <input type="text" class="form-control rezeptinhalt" placeholder="{{ recepie.categorie }}" [(ngModel)]="item.categorie"> -->
-    <div class="input-group">
-      <select class="custom-select">
-        <option selected>Wähle eine Kategorie...</option>
-        <option value="Pizza">Pizza</option>
-        <option value="Pasta">Pasta</option>
-        <option value="Fleisch">Fleisch</option>
-        <option value="Fisch">Fisch</option>
-        <option value="Suppe">Suppe</option>
-        <option value="Salat">Salat</option>
-        <option value="Vorspeise">Vorspeise</option>
-        <option value="Nachspeise">Nachspeise</option>
-      </select>
-      <!-- <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button">Button</button>
-      </div> -->
+    <div class="form-field">
+      <input type="text" formControlName="recepietitle" class="form-control rezeptinhalt rezepttitel" placeholder="Rezepttitel">
+      {{item.recepietitle}}
     </div>
-  </div>
 
-
-
-  <div class="form-field rezeptinhalte-box displayFlex">
-    <span class="material-icons form-dark icon-positionierung"> restaurant_menu </span>
-    <!-- <input type="text" class="form-control rezeptinhalt" placeholder="{{ recepie.diet }}" [(ngModel)]="item.diet"> -->
-    <div class="input-group">
-      <select class="custom-select">
-        <option selected>Wähle eine Ernährungsform...</option>
-        <option value="normal">normal</option>
-        <option value="vegetarisch">vegetarisch</option>
-        <option value="vegan">vegan</option>
-        <option value="low carb">low carb</option>
-      </select>
+    <div class="form-field rezeptinhalte-box displayFlex">
+      <span class="material-icons form-dark icon-positionierung"> restaurant </span>
+      <!-- <input type="text" class="form-control rezeptinhalt" placeholder="Kategorie" [(ngModel)]="item.categorie"> -->
+      <div class="input-group" formControlName="categorie">
+        <select class="custom-select">
+          <option selected>Wähle eine Kategorie...</option>
+          <option value="Pizza">Pizza</option>
+          <option value="Pasta">Pasta</option>
+          <option value="Fleisch">Fleisch</option>
+          <option value="Fisch">Fisch</option>
+          <option value="Suppe">Suppe</option>
+          <option value="Salat">Salat</option>
+          <option value="Vorspeise">Vorspeise</option>
+          <option value="Nachspeise">Nachspeise</option>
+        </select>
+      </div>
     </div>
-  </div>
 
+<<<<<<< Updated upstream
   <!--<div class="form-field rezeptinhalte-box">
     <span class="material-icons form-dark icon-positionierung"> shopping_cart </span> Zutaten für 2 Portionen <br>
     <textarea type="text" class="form-control rezeptinhalt" rows="5" placeholder="{{ recepie.ingredients }}" [(ngModel)]="item.ingredients"></textarea>
@@ -70,29 +49,33 @@
     <span class="material-icons form-dark icon-positionierung"> format_list_bulleted </span> Zubereitung <br>
     <textarea type="text" class="form-control rezeptinhalt" placeholder="{{ recepie.preparation }}" [(ngModel)]="item.preparation" style="display: block;"></textarea>
   </div>-->
+=======
+    <div class="form-field rezeptinhalte-box displayFlex">
+      <span class="material-icons form-dark icon-positionierung"> restaurant_menu </span>
+      <!-- <input type="text" class="form-control rezeptinhalt" placeholder="Ernährungsform" [(ngModel)]="item.diet"> -->
+      <div class="input-group">
+        <select class="custom-select" [(ngModel)]="item.diet">
+          <option selected>Wähle eine Ernährungsform...</option>
+          <option value="normal">normal</option>
+          <option value="vegetarisch">vegetarisch</option>
+          <option value="vegan">vegan</option>
+          <option value="low carb">low carb</option>
+        </select>
+      </div>
+    </div>
 
-  <div class="form-field rezeptinhalte-box">
-    <span class="material-icons form-dark icon-positionierung"> local_fire_department </span> Nährwerte <br>
-    <table>
-      <tr>
-        <td>Kalorien: </td>
-        <td><input type="text" class="form-control rezeptinhalt" placeholder="Kalorien" [(ngModel)]="item.nutrition"></td>
-      </tr>
-      <tr>
-        <td>Eiweiß: </td>
-        <td><input type="text" class="form-control rezeptinhalt" placeholder="Eiweiß"></td>
-      </tr>
-      <tr>
-        <td>Fett: </td>
-        <td><input type="text" class="form-control rezeptinhalt" placeholder="Fett"></td>
-      </tr>
-      <tr>
-        <td>Kohlenhydrate: </td>
-        <td><input type="text" class="form-control rezeptinhalt" placeholder="Kohlenhydrate"></td>
-      </tr>
-    </table>
-  </div>
+    <div class="form-field rezeptinhalte-box">
+      <span class="material-icons form-dark icon-positionierung"> shopping_cart </span> Zutaten für 2 Portionen <br>
+      <textarea type="text" class="form-control rezeptinhalt" rows="5" placeholder="Zutaten" [(ngModel)]="item.ingredients"></textarea>
+    </div>
+>>>>>>> Stashed changes
 
+    <div class="form-field rezeptinhalte-box">
+      <span class="material-icons form-dark icon-positionierung"> format_list_bulleted </span> Zubereitung <br>
+      <textarea type="text" class="form-control rezeptinhalt" placeholder="Füge die einzelnen Bearbeitungsschritte hinzu." [(ngModel)]="item.preparation" style="display: block;"></textarea>
+    </div>
+
+<<<<<<< Updated upstream
   <div class="form-field rezeptinhalte-box displayFlex">
     <span class="material-icons form-dark icon-positionierung"> schedule </span>
     <input type="text" class="form-control rezeptinhalt" placeholder="{{ recepie.time }}" [(ngModel)]="item.time">
@@ -103,9 +86,31 @@
         <option value="3060">30-60 Minuten</option>
         <option value="60">&gt; 60 Minuten</option>
       </select>
+=======
+    <div class="form-field rezeptinhalte-box">
+      <span class="material-icons form-dark icon-positionierung"> local_fire_department </span> Nährwerte <br>
+      <table>
+        <tr>
+          <td>Kalorien: </td>
+          <td><input type="text" class="form-control rezeptinhalt" placeholder="Kalorien" [(ngModel)]="item.nutrition"></td>
+        </tr>
+        <tr>
+          <td>Eiweiß: </td>
+          <td><input type="text" class="form-control rezeptinhalt" placeholder="Eiweiß"></td>
+        </tr>
+        <tr>
+          <td>Fett: </td>
+          <td><input type="text" class="form-control rezeptinhalt" placeholder="Fett"></td>
+        </tr>
+        <tr>
+          <td>Kohlenhydrate: </td>
+          <td><input type="text" class="form-control rezeptinhalt" placeholder="Kohlenhydrate"></td>
+        </tr>
+      </table>
+>>>>>>> Stashed changes
     </div>
-  </div>
 
+<<<<<<< Updated upstream
   <div class="form-field rezeptinhalte-box displayFlex">
     <span class="material-icons form-dark icon-positionierung"> expand </span>
     <input type="text" class="form-control rezeptinhalt" placeholder="{{ recepie.difficulty }}" [(ngModel)]="item.difficulty">
@@ -116,8 +121,33 @@
         <option value="mittel">mittel</option>
         <option value="schwer">schwer</option>
       </select>
+=======
+    <div class="form-field rezeptinhalte-box displayFlex">
+      <span class="material-icons form-dark icon-positionierung"> schedule </span>
+      <!-- <input type="text" class="form-control rezeptinhalt" placeholder="Zubereitungszeit" [(ngModel)]="item.time"> -->
+      <div class="input-group">
+        <select class="custom-select" [(ngModel)]="item.time">
+          <option selected>Wähle die Zubereitungszeit...</option>
+          <option value="30">&lt; 30 Minuten</option>
+          <option value="3060">30-60 Minuten</option>
+          <option value="60">&gt; 60 Minuten</option>
+        </select>
+      </div>
+>>>>>>> Stashed changes
     </div>
-  </div>
 
+    <div class="form-field rezeptinhalte-box displayFlex">
+      <span class="material-icons form-dark icon-positionierung"> expand </span>
+      <!-- <input type="text" class="form-control rezeptinhalt" placeholder="Schwierigkeitsgrad" [(ngModel)]="item.difficulty"> -->
+      <div class="input-group">
+        <select class="custom-select" [(ngModel)]="item.difficulty">
+          <option selected>Wähle den Schwierigkeitsgrad...</option>
+          <option value="leicht">leicht</option>
+          <option value="mittel">mittel</option>
+          <option value="schwer">schwer</option>
+        </select>
+      </div>
+    </div>
+  </form>
 </div>
 
