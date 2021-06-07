@@ -7,6 +7,8 @@ $orange: #FFAA00;
 $green: #9CBE3F;
 $blue: #77B5E3;
 $schriftfarbe: #3d3d3d;
+$gray: #f3f2f2;
+$violet: #60339F;
 
 
 /* Hover */
@@ -16,6 +18,23 @@ $blue-h: #669dbf;
 
 /* Light Mode */
 $l-background-color: #ffffff;
+
+
+
+
+
+.bg-orange {
+  background-color: $orange;
+}
+.bg-green {
+  background-color: $green;
+}
+.bg-blue {
+  background-color: $blue;
+}
+.bg-violet {
+  background-color: $violet;
+}
 
 
 
@@ -168,6 +187,10 @@ header{
   color: white;
 }
 
+.icon-dark {
+  color: $schriftfarbe;
+}
+
 .form-field {
   margin-top: 20px;
   margin-bottom: 15px;
@@ -225,10 +248,6 @@ header{
 
 
 /* ------------------------ R E Z E P T  Ü B E R S I C H T ------------------------ */
-
-
-$gray: #f3f2f2;
-
 
 .icon-lupe {
   margin-top: 6px;
@@ -383,6 +402,70 @@ input.rezepttitel {
   background-color: $green-h;
 }
 
+input.EK-item-bez {
+  max-width: 150px;
+  border: 0px solid #fff;
+}
+input.EK-item-number, input.EK-item-number:focus {
+  max-width: 50px;
+  border: 1px solid rgb(228, 228, 228);
+  border-radius: 10px;
+}
+.material-icons.md-26{
+  font-size: 26px;
+}
+
+
+
+
+/* ------------ E S S E N S P L A N ------------ */
+
+.container.BoxVonTag {
+  background-color: $gray;
+  border-radius: 20px;
+  margin-bottom: 0.5em;
+}
+.col-sm-2.rightbounded {
+  text-align: right;
+}
+.col-sm-8.leftbounded {
+  text-align: left;
+}
+.material-icons.md-20{
+  font-size: 20px;
+}
+
+
+
+/* ------------------------- N A V B A R ------------------------- */
+
+.cookery-navbar {
+  position: fixed;
+  bottom:0;
+  border-top: 3px solid $orange;
+  width:100%;
+  max-width: 414px;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+}
+
+
+.material-icons.md-36{
+  font-size: 36px;
+}
+
+
+.row > * {
+  padding-left: 1.1em !important;
+  padding-right: 1.1em !important;
+}
+
+.cookery-navbar .container .row .col-sm {
+  padding: 10px 0px;
+}
+
+
 
 
 
@@ -419,88 +502,16 @@ $d-background-color: #0D0D0D;
 
 
 
+
+
+
+
+
 @media only screen and (max-width: 415px) {
   .material-icons.md-36{
     font-size: 36px;
   }
-}
 
-
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
-
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
-
-
-
-/* ------------------------- N A V B A R ------------------------- */
-.cookery-navbar {
-  position: fixed;
-  bottom:0;
-  border-top: 3px solid $orange;
-  width:100%;
-  max-width: 414px;
-  margin: auto;
-  text-align: center;
-  background-color: white;
-}
-
-
-.material-icons.md-36{
-  font-size: 36px;
-}
-
-
-.row > * {
-  padding-left: 1.1em !important;
-  padding-right: 1.1em !important;
-}
-
-
-
-/* ------------ E I N K A U F S L I S T E ------------ */
-input.EK-item-bez {
-  max-width: 150px;
-  border: 0px solid #fff;
-}
-input.EK-item-number, input.EK-item-number:focus {
-  max-width: 50px;
-  border: 1px solid rgb(228, 228, 228);
-  border-radius: 10px;
-}
-.material-icons.md-26{
-  font-size: 26px;
-}
-
-
-
-
-/* ------------ E S S E N S P L A N ------------ */
-
-.container.BoxVonTag {
-  background-color: $gray;
-  border-radius: 20px;
-  margin-bottom: 0.5em;
-}
-.col-sm-2.rightbounded {
-  text-align: right;
-}
-.col-sm-8.leftbounded {
-  text-align: left;
-}
-.material-icons.md-20{
-  font-size: 20px;
-}
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 415px) {
   .material-icons.md-48{
     font-size: 36px;
   }
@@ -519,26 +530,33 @@ input.EK-item-number, input.EK-item-number:focus {
   }
 }
 
-$violet: #60339F;
-
-.bg-orange {
-  background-color: $orange;
-}
-.bg-green {
-  background-color: $green;
-}
-.bg-blue {
-  background-color: $blue;
-}
-.bg-violet {
-  background-color: $violet;
-}
 
 
-.icon-dark {
-  color: $schriftfarbe;
-}
 
-.cookery-navbar .container .row .col-sm {
-  padding: 10px 0px;
-}
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
