@@ -23,4 +23,11 @@ export class RecepieService {
       .collection('RecepieModel')
       .snapshotChanges();
   }
+
+  deleteRecepie(recepie) {
+    return this.angularFirestore
+      .collection('RecepieModel')
+      .doc(recepie.id)
+      .delete();
+  }
 }
