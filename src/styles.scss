@@ -542,13 +542,32 @@ $d-background-color: #0D0D0D;
 
 
 
+/* ------------ P R O F I L ------------ */
 
+.main-wrapper.profile {
+  text-align: left;
+}
 
+.leftbounded {
+  text-align: left;
+}
+.btn.btn-filter.container.leftbounded {
+  margin-bottom: 5px;
+}
 
-
-
-
-
+.photo {
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  height: 150px;
+  min-height: 150px;
+  max-height: 150px;
+  background-color: $violet;
+  border-radius: 100px;
+  margin: auto;
+  color: white;
+  padding-top: 20%;
+}
 
 
 
