@@ -61,7 +61,7 @@
     </div>
   </div>
 
-  <div class="form-field rezeptinhalte-box">
+  <!--<div class="form-field rezeptinhalte-box">
     <span class="material-icons form-dark icon-positionierung"> shopping_cart </span> Zutaten für 2 Portionen <br>
     <textarea type="text" class="form-control rezeptinhalt" rows="5" placeholder="{{ recepie.ingredients }}" [(ngModel)]="item.ingredients"></textarea>
   </div>
@@ -69,7 +69,7 @@
   <div class="form-field rezeptinhalte-box">
     <span class="material-icons form-dark icon-positionierung"> format_list_bulleted </span> Zubereitung <br>
     <textarea type="text" class="form-control rezeptinhalt" placeholder="{{ recepie.preparation }}" [(ngModel)]="item.preparation" style="display: block;"></textarea>
-  </div>
+  </div>-->
 
   <div class="form-field rezeptinhalte-box">
     <span class="material-icons form-dark icon-positionierung"> local_fire_department </span> Nährwerte <br>
@@ -95,7 +95,7 @@
 
   <div class="form-field rezeptinhalte-box displayFlex">
     <span class="material-icons form-dark icon-positionierung"> schedule </span>
-    <!-- <input type="text" class="form-control rezeptinhalt" placeholder="{{ recepie.time }}" [(ngModel)]="item.time"> -->
+    <input type="text" class="form-control rezeptinhalt" placeholder="{{ recepie.time }}" [(ngModel)]="item.time">
     <div class="input-group">
       <select class="custom-select">
         <option selected>Wähle die Zubereitungszeit...</option>
@@ -108,7 +108,7 @@
 
   <div class="form-field rezeptinhalte-box displayFlex">
     <span class="material-icons form-dark icon-positionierung"> expand </span>
-    <!-- <input type="text" class="form-control rezeptinhalt" placeholder="{{ recepie.difficulty }}" [(ngModel)]="item.difficulty"> -->
+    <input type="text" class="form-control rezeptinhalt" placeholder="{{ recepie.difficulty }}" [(ngModel)]="item.difficulty">
     <div class="input-group">
       <select class="custom-select">
         <option selected>Wähle den Schwierigkeitsgrad...</option>
