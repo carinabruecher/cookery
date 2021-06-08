@@ -544,6 +544,9 @@ $d-background-color: #0D0D0D;
 
 /* ------------ P R O F I L ------------ */
 
+$red: #D54B4B;
+
+
 .main-wrapper.profile {
   text-align: left;
 }
@@ -551,9 +554,12 @@ $d-background-color: #0D0D0D;
 .leftbounded {
   text-align: left;
 }
-.btn.btn-filter.container.leftbounded {
+
+/* das muss nach oben bei F I L T E R U N G hin */
+.btn.btn-filter {
   margin-bottom: 5px;
 }
+/* ENDE */
 
 .photo {
   width: 150px;
@@ -567,6 +573,9 @@ $d-background-color: #0D0D0D;
   margin: auto;
   color: white;
   padding-top: 20%;
+}
+.warning-clr {
+  color: $red;
 }
 
 
