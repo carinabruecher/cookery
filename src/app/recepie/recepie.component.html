@@ -7,8 +7,6 @@
   <input type="text" class="form-control" placeholder="Welches Rezept suchst du?" style="border-left: 0px solid #ccc; border-radius:0px 30px 30px 0px;">
 </div>
 
-
-
 <div class="Filterung">
 
 <a href="" class="btn btn-lg" role="button" aria-disabled="true">
@@ -64,50 +62,24 @@
   </div></button>
 </div>
 
-
-
-
 <table class="table rezeptuebersicht">
-  <!--
-  <thead>
-  <tr>
-    <th scope="col">#</th>
-    <th scope="col">recepietitle</th>
-    <th scope="col">categorie</th>
-    <th scope="col">diet</th>
-    <th scope="col">difficulty</th>
-    <th scope="col">ingredients</th>
-    <th scope="col">nutrition</th>
-    <th scope="col">preparation</th>
-    <th scope="col">time </th>
-  </tr>
-  </thead>-->
   <tbody>
   <tr *ngFor="let recepie of Recepies; let i = index">
     <th scope="row">{{ i + 1 }}</th>
     <td>{{ recepie.recepietitle }}</td>
     <td class="displayNone icon-box icon-box-fav" width="5%"> <span class="material-icons"> favorite_border </span> </td>
     <td class="displayNone icon-box icon-box-edit" width="5%">
-      <button (click)="removeRecepie(recepie)"> <span class="material-icons"> create </span> </button>
+      <button routerLink="/edit-recepie/{{recepie.id}}"> <span class="material-icons"> create </span> </button>
     </td>
     <td class="displayNone icon-box icon-box-edit" width="5%">
       <span (click)="removeRecepie(recepie)"> <span class="material-icons"> delete </span> </span>
     </td>
-    <!-- <td>{{ recepie.categorie }}</td>
-    <td>{{ recepie.diet }}</td>
-    <td>{{ recepie.difficulty }}</td>
-    <td>{{ recepie.ingredients }}</td>
-    <td>{{ recepie.nutrition }}</td>
-    <td>{{ recepie.preparation }}</td>
-    <td>{{ recepie.time }}</td> -->
   </tr>
   </tbody>
 </table>
 
-
-<br><br>
+<br>
 <p>
   <a href="/add-new-recepie" class="btn btn-rezept btn-lg btn-add" role="button" aria-disabled="true"><span class="material-icons"> add </span></a>
 </p>
-
 </div>

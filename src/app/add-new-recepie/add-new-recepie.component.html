@@ -19,11 +19,6 @@
   <input type="text" class="form-control rezeptinhalt rezepttitel" placeholder="Rezepttitel" [(ngModel)]="item.recepietitle">
 </div>
 
-<div class="form-field">
-  <!-- <span class="material-icons form-dark"> photo_camera </span> -->
-  <input type="file" class="form-control" placeholder="Foto hinzufügen" [(ngModel)]="item.picture">
-</div>
-
 <div class="form-field rezeptinhalte-box displayFlex">
   <span class="material-icons form-dark icon-positionierung"> restaurant </span>
   <!-- <input type="text" class="form-control rezeptinhalt" placeholder="Kategorie" [(ngModel)]="item.categorie"> -->
@@ -46,7 +41,7 @@
   <span class="material-icons form-dark icon-positionierung"> restaurant_menu </span>
   <!-- <input type="text" class="form-control rezeptinhalt" placeholder="Ernährungsform" [(ngModel)]="item.diet"> -->
   <div class="input-group">
-    <select class="custom-select" id="inputGroupSelect04">
+    <select class="custom-select">
       <option selected>Wähle eine Ernährungsform...</option>
       <option value="normal">normal</option>
       <option value="vegetarisch">vegetarisch</option>

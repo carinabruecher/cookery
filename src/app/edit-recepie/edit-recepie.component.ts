@@ -1,37 +1,51 @@
 import { Component, OnInit } from '@angular/core';
-import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
-import { RecepieModel } from './../recepie-model';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { RecepieService } from '../recepie.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { FormBuilder, FormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'app-edit-recepie',
   templateUrl: './edit-recepie.component.html',
   styleUrls: ['./edit-recepie.component.scss']
 })
+
 export class EditRecepieComponent implements OnInit {
-  item: RecepieModel = {};
-  recepieModelCollection: AngularFirestoreCollection<any>;
-  list: Observable<RecepieModel[]>;
+
+  public editForm: FormGroup;
+  recepieRef: any;
 
   constructor(
-    private afs: AngularFirestore) {
-    this.recepieModelCollection = afs.collection<RecepieModel>('RecepieModel');
+    public recepieService: RecepieService,
+    public formBuilder: FormBuilder,
+    private act: ActivatedRoute,
+    private router: Router
+  ) {
+    this.editForm = this.formBuilder.group({
+      recepietitle: [''],
+      categorie: [''],
+      ingredients: ['']
+    });
   }
 
   ngOnInit(): void {
-    this.list = this.recepieModelCollection.snapshotChanges().pipe(
-      map(actions => actions.map(a => {
-        const data = a.payload.doc.data() as RecepieModel;
-        const id = a.payload.doc.id;
-        return {id, ...data };
-      }))
-    );
+    const id = this.act.snapshot.paramMap.get('id');
+
+    this.recepieService.getRecepieDoc(id).subscribe(res => {
+      this.recepieRef = res;
+      this.editForm = this.formBuilder.group({
+        name: [this.recepieRef.name],
+        email: [this.recepieRef.email],
+        contact: [this.recepieRef.contact]
+      });
+    });
   }
 
-  public save(): void {
-    this.recepieModelCollection.add(this.item);
-    this.item = {};
+  onSubmit(): void {
+    const id = this.act.snapshot.paramMap.get('id');
+
+    this.recepieService.updateRecepie(this.editForm.value, id);
+    this.router.navigate(['/rezept']);
   }
 
 }

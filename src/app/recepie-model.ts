@@ -1,4 +1,5 @@
 export interface RecepieModel {
+  id?: string;
   recepietitle?: string;
   picture?: 'images/jpeg';
   nutritionpicture?: string;
