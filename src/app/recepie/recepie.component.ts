@@ -46,7 +46,7 @@ export class RecepieComponent implements OnInit {
   getTime(){
     switch(this.chosenTime){
       case "30": {
-        this.database.collection('RecepieModul').ref.where('time', '<=', '30').get()
+        this.database.collection('nnRecepieModul').ref.where('time', '<=', '30').get()
         .then((querySnapshot) => {
            querySnapshot.forEach( data => {
             console.log(data.data() as object);
