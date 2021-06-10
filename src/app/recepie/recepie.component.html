@@ -67,7 +67,11 @@
   <tr *ngFor="let recepie of Recepies; let i = index">
     <th scope="row">{{ i + 1 }}</th>
     <td>{{ recepie.recepietitle }}</td>
-    <td class="displayNone icon-box icon-box-fav" width="5%"> <span class="material-icons"> favorite_border </span> </td>
+    <td class="displayNone icon-box icon-box-fav" width="5%">
+
+      <span class="material-icons"> favorite_border </span>
+    </td>
+
     <td class="displayNone icon-box icon-box-edit" width="5%">
       <button routerLink="/edit-recepie/{{recepie.id}}"> <span class="material-icons"> create </span> </button>
     </td>

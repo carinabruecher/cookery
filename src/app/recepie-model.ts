@@ -12,4 +12,5 @@ export interface RecepieModel {
   nutrition?: string;
   time?: string;
   difficulty?: string;
+  favorit: boolean;
 }

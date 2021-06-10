@@ -44,6 +44,7 @@ export class RecepieService {
         preparation: recepie.preparation,
         time: recepie.time,
         difficulty: recepie.difficulty,
+        favorit: recepie.favorit
       });
   }
 }
