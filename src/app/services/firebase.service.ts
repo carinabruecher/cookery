@@ -100,7 +100,7 @@ export class FirebaseService {
   }
 
   SetUserData(user) {
-    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`userProfil/${user.uid}`);
     const userData: User = {
       uid: user.uid,
       email: user.email,

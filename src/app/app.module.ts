@@ -28,6 +28,7 @@ import { AddNewRecepieComponent } from './add-new-recepie/add-new-recepie.compon
 import { EditRecepieComponent } from './edit-recepie/edit-recepie.component';
 import { ProfilComponent } from './profil/profil.component';
 import { HaushaltComponent } from './haushalt/haushalt.component';
+import { NewNameComponent } from './new-name/new-name.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { HaushaltComponent } from './haushalt/haushalt.component';
     AddNewRecepieComponent,
     EditRecepieComponent,
     ProfilComponent,
-    HaushaltComponent
+    HaushaltComponent,
+    NewNameComponent
   ],
   imports: [
     BrowserModule,
