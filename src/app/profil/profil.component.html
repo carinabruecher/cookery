@@ -4,7 +4,7 @@
   <hr>
 
   <div class="btn btn-filter container">
-    <div class="photo">{{(user.name) ? user.name: 'Nutzer'}}</div> <br>
+    <div class="photo">Ma</div> <br>
     <h3>{{(user.name) ? user.name: 'Nutzer'}}</h3>
     {{user.email}}
   </div>
@@ -12,9 +12,9 @@
   <br><br>
 
   <h4>Account verwalten</h4>
-  <!-- <div class="btn btn-filter container leftbounded" routerLink="/name-ändern">
+  <div class="btn btn-filter container leftbounded">
     <span class="material-icons"> badge </span> Benutzername ändern
-  </div>-->
+  </div>
   <div class="btn btn-filter container leftbounded" routerLink="/userMgmt">
     <span class="material-icons"> password </span> Passwort ändern
   </div>
@@ -29,6 +29,6 @@
 
   <button class="btn btn-filter container warning-clr" (click)="toLogout()">Ausloggen</button>
   <br>
-  <!--<button class="btn btn-filter container warning-clr">Konto löschen</button>-->
+  <button class="btn btn-filter container warning-clr">Konto löschen</button>
 
 </div>

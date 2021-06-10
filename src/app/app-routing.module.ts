@@ -16,7 +16,6 @@ import { VerifyMailComponent} from './verify-mail/verify-mail.component';
 import { EditRecepieComponent } from './edit-recepie/edit-recepie.component';
 import { ProfilComponent } from './profil/profil.component';
 import { HaushaltComponent } from './haushalt/haushalt.component';
-import { NewNameComponent } from './new-name/new-name.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -34,7 +33,6 @@ const routes: Routes = [
   { path: 'edit-recepie', component: EditRecepieComponent},
   { path: 'profile', component: ProfilComponent, canActivate: [AuthGuard]},
   { path: 'haushalt', component: HaushaltComponent}
-  { path: 'name-ändern', component: NewNameComponent}
 ];
 
 @NgModule({
