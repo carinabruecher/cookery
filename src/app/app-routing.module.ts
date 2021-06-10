@@ -15,6 +15,7 @@ import { UserManagementComponent } from './user-management/user-management.compo
 import { VerifyMailComponent} from './verify-mail/verify-mail.component';
 import { EditRecepieComponent } from './edit-recepie/edit-recepie.component';
 import { ProfilComponent } from './profil/profil.component';
+import { HaushaltComponent } from './haushalt/haushalt.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -30,7 +31,8 @@ const routes: Routes = [
   { path: 'verifyMail', component: VerifyMailComponent},
   { path: 'add-new-recepie', component: AddNewRecepieComponent},
   { path: 'edit-recepie', component: EditRecepieComponent},
-  { path: 'profile', component: ProfilComponent, canActivate: [AuthGuard]}
+  { path: 'profile', component: ProfilComponent, canActivate: [AuthGuard]},
+  { path: 'haushalt', component: HaushaltComponent}
 ];
 
 @NgModule({

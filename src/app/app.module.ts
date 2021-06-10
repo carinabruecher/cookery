@@ -27,6 +27,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddNewRecepieComponent } from './add-new-recepie/add-new-recepie.component';
 import { EditRecepieComponent } from './edit-recepie/edit-recepie.component';
 import { ProfilComponent } from './profil/profil.component';
+import { HaushaltComponent } from './haushalt/haushalt.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { ProfilComponent } from './profil/profil.component';
     VerifyMailComponent,
     AddNewRecepieComponent,
     EditRecepieComponent,
-    ProfilComponent
+    ProfilComponent,
+    HaushaltComponent
   ],
   imports: [
     BrowserModule,

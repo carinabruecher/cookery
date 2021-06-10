@@ -547,10 +547,6 @@ $d-background-color: #0D0D0D;
 $red: #D54B4B;
 
 
-.main-wrapper.profile {
-  text-align: left;
-}
-
 .leftbounded {
   text-align: left;
 }
@@ -574,8 +570,34 @@ $red: #D54B4B;
   color: white;
   padding-top: 20%;
 }
+.kreis {
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  background-color: $violet;
+  border-radius: 100px;
+  color: white;
+  margin-right: 5px;
+}
 .warning-clr {
   color: $red;
+}
+
+
+
+.btn.btn-warning {
+  background-color: $red;
+  color: white;
+}
+.btn.btn-warning:hover {
+  background-color: #000;
+  color: white;
+}
+.float-right {
+  float:right;
 }
 
 
