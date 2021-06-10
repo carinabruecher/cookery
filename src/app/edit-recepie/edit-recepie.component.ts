@@ -3,15 +3,12 @@ import { RecepieService } from '../recepie.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
-
 @Component({
   selector: 'app-edit-recepie',
   templateUrl: './edit-recepie.component.html',
   styleUrls: ['./edit-recepie.component.scss']
 })
-
 export class EditRecepieComponent implements OnInit {
-
   public editForm: FormGroup;
   recepieRef: any;
 
@@ -22,9 +19,14 @@ export class EditRecepieComponent implements OnInit {
     private router: Router
   ) {
     this.editForm = this.formBuilder.group({
-      recepietitle: [''],
       categorie: [''],
-      ingredients: ['']
+      diet: [''],
+      difficulty: [''],
+      ingredients: [''],
+      nutrition: [''],
+      preparation: [''],
+      recepietitle: [''],
+      time: [''],
     });
   }
 
@@ -34,14 +36,19 @@ export class EditRecepieComponent implements OnInit {
     this.recepieService.getRecepieDoc(id).subscribe(res => {
       this.recepieRef = res;
       this.editForm = this.formBuilder.group({
-        name: [this.recepieRef.name],
-        email: [this.recepieRef.email],
-        contact: [this.recepieRef.contact]
+        categorie: [this.recepieRef.categorie],
+        diet: [this.recepieRef.diet],
+        difficulty: [this.recepieRef.difficulty],
+        ingredients: [this.recepieRef.ingredients],
+        nutrition: [this.recepieRef.nutrition],
+        preparation: [this.recepieRef.preparation],
+        recepietitle: [this.recepieRef.recepietitple],
+        time: [this.recepieRef.recepietitple],
       });
     });
   }
 
-  onSubmit(): void {
+  onSubmit() {
     const id = this.act.snapshot.paramMap.get('id');
 
     this.recepieService.updateRecepie(this.editForm.value, id);
