@@ -30,7 +30,7 @@ const routes: Routes = [
   { path: 'verifyMail', component: VerifyMailComponent},
   { path: 'add-new-recepie', component: AddNewRecepieComponent},
   { path: 'edit-recepie', component: EditRecepieComponent},
-  { path: 'profile', component: ProfilComponent}
+  { path: 'profile', component: ProfilComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({

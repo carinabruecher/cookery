@@ -5,8 +5,8 @@
 
   <div class="btn btn-filter container">
     <div class="photo">Ma</div> <br>
-    <h3>test</h3>
-
+    <h3>{{(user.name) ? user.name: 'Nutzer'}}</h3>
+    {{user.email}}
   </div>
 
   <br><br>
@@ -30,7 +30,5 @@
   <button class="btn btn-filter container warning-clr" (click)="toLogout()">Ausloggen</button>
   <br>
   <button class="btn btn-filter container warning-clr">Konto löschen</button>
-
-
 
 </div>

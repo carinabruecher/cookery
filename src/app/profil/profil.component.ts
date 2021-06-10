@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FirebaseService } from '../services/firebase.service';
+import { User } from '../shared/services/user';
 
 @Component({
   selector: 'app-profil',
@@ -7,10 +8,12 @@ import { FirebaseService } from '../services/firebase.service';
   styleUrls: ['./profil.component.scss']
 })
 export class ProfilComponent implements OnInit {
+  user: User;
 
-  constructor( public firebaseService: FirebaseService ) { }
+  constructor( public firebaseService: FirebaseService) { }
 
   ngOnInit(): void {
+    this.user = this.firebaseService.getUserData();
   }
 
   toLogout(){

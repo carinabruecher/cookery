@@ -1,8 +1,10 @@
 import {Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFirestore} from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreDocument} from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { auth } from 'firebase/firebase-auth';
+import { hasUncaughtExceptionCaptureCallback } from 'process';
+import { User } from '../shared/services/user';
 
 @Injectable({
   providedIn: 'root'
@@ -10,20 +12,33 @@ import { auth } from 'firebase/firebase-auth';
 export class FirebaseService {
 
   isLoggedIn: boolean;
+  userData: any;
+
   constructor(public firebaseAuth: AngularFireAuth,
               public router: Router,
               public firestore: AngularFirestore,
               public afs: AngularFirestore) {
     this.isLoggedIn = false;
 
-    this.firebaseAuth.onAuthStateChanged((user) => {
+    /*this.firebaseAuth.onAuthStateChanged((user) => {
       if (user) {
         this.isLoggedIn = true;
       } else {
         this.isLoggedIn = false;
       }
-    });
-  }
+    });*/
+
+    this.firebaseAuth.authState.subscribe(user => {
+      if (user) {
+        this.userData = user;
+        localStorage.setItem('user', JSON.stringify(this.userData));
+        JSON.parse(localStorage.getItem('user'));
+      } else {
+        localStorage.setItem('user', null);
+        JSON.parse(localStorage.getItem('user'));
+      }
+  });
+}
 
   getAuth(){
     return this.firebaseAuth.authState;
@@ -35,6 +50,7 @@ export class FirebaseService {
         this.isLoggedIn = true;
         localStorage.setItem('user', JSON.stringify(res.user));
         this.router.navigate(['home']);
+        this.SetUserData(res.user);
       });
   }
 
@@ -62,7 +78,7 @@ export class FirebaseService {
         Here we add the functionality to send the email.
       */
       await newUserCredential.user.sendEmailVerification();
-
+        this.SetUserData(newUserCredential)
       return newUserCredential;
     } catch (error) {
       throw alert('Es ist ein Fehler aufgetreten.');
@@ -81,5 +97,21 @@ export class FirebaseService {
       email,
       { url: 'http://localhost:4200/auth/userMgmt'}
     );
+  }
+
+  SetUserData(user) {
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
+    const userData: User = {
+      uid: user.uid,
+      email: user.email,
+      name: user.name
+    }
+    return userRef.set(userData, {
+      merge: true
+    })
+  }
+
+  getUserData(){
+    return this.userData;
   }
 }
