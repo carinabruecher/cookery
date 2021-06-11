@@ -10,21 +10,30 @@
         <div class="col-sm-6">
           Du
         </div>
-        <div class="col-sm-3 float-right">
+        <!---<div class="col-sm-3 float-right">
           <div class="btn btn-warning float-right">verlassen</div>
-        </div>
+        </div>-->
       </div>
     </div>
   </div>
 
   <br><br>
+  <table class="nutzer">
+    <tbody>
+      <tr *ngFor="let Nutzer of nutzer; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ Nutzer.email }}</td>
+        </tr>
+      </tbody>
+  </table>
+  <br><br>
 
   <h4>Mitglieder hinzufügen</h4>
-  <div class="btn btn-filter container leftbounded">
+  <div class="btn btn-filter container leftbounded" routerLink="/regestrieren">
     <div class="container">
       <div class="row">
         <div class="col-sm-3">
-          <a href="#" routerLink="#"><div class="kreis">+</div></a>
+          <a href="#" routerLink="/regestrieren"><div class="kreis">+</div></a>
         </div>
         <div class="col-sm-9">
           Lade ein neues Mitglied ein

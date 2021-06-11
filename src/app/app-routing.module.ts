@@ -33,7 +33,7 @@ const routes: Routes = [
   { path: 'add-new-recepie', component: AddNewRecepieComponent},
   { path: 'edit-recepie', component: EditRecepieComponent},
   { path: 'profile', component: ProfilComponent, canActivate: [AuthGuard]},
-  { path: 'haushalt', component: HaushaltComponent},
+  { path: 'haushalt', component: HaushaltComponent, canActivate: [AuthGuard]},
   { path: 'name-ändern', component: NewNameComponent}
 ];
 
