@@ -20,7 +20,7 @@ export class FirebaseService {
       if (user) {
         globals.isLoggedIn = true;
       } else {
-        globals.isLoggedIn = false; 
+        globals.isLoggedIn = false;
       }
     });
   }
