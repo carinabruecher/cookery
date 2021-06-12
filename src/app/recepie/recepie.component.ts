@@ -46,30 +46,27 @@ export class RecepieComponent implements OnInit {
   getTime(){
     switch(this.chosenTime){
       case "30": {
-        this.database.collection('RecepieModul').ref.where('time', '<=', '30').get()
-        .then((querySnapshot) => {
-           querySnapshot.forEach( data => {
-            console.log(data.data() as object);
-           });
-        });
+        this.recepieService.get30().get().then((querySnapshot) =>{
+          querySnapshot.forEach(data => {
+            this.Recepies.push(data.data() as object);
+            })
+          })
         break;
       }
       case "30-60": {
-        this.database.collection('RecepieModul').ref.where('time', '>', '30').where('time', '<=', '60').get()
-          .then((querySnapshot) => {
-            querySnapshot.forEach( data => {
-              console.log(data.data() as object);
-            });
-          });
+        this.recepieService.get3060().get().then((querySnapshot) =>{
+          querySnapshot.forEach(data => {
+            this.Recepies.push(data.data() as object);
+            })
+          })
           break;
       }
       case "60": {
-        this.database.collection('RecepieModul').ref.where('time', '>', '60').get()
-          .then((querySnapshot) => {
-            querySnapshot.forEach( data => {
-             console.log(data.data() as object);
-          });
-        });
+        this.recepieService.get60().get().then((querySnapshot) =>{
+          querySnapshot.forEach(data => {
+            this.Recepies.push(data.data() as object);
+            })
+          })
         break;
       }
     }
@@ -78,75 +75,67 @@ export class RecepieComponent implements OnInit {
   getCategorie(){
     switch(this.chosenCategorie){
       case "Pizza": {
-        this.database.collection('RecepieModul').ref.where('categorie', '==', this.chosenCategorie).get()
-        .then((querySnapshot) => {
-           querySnapshot.forEach( data => {
-            console.log(data.data() as object);
-           });
-        });
+        this.recepieService.getPizza().get().then((querySnapshot) =>{
+          querySnapshot.forEach(data => {
+            this.Recepies.push(data.data() as object);
+            })
+          })
         break;
       }
       case "Pasta": {
-        this.database.collection('RecepieModul').ref.where('categorie', '==', this.chosenCategorie).get()
-        .then((querySnapshot) => {
-           querySnapshot.forEach( data => {
-            console.log(data.data() as object);
-           });
-        });
+        this.recepieService.getPasta().get().then((querySnapshot) =>{
+          querySnapshot.forEach(data => {
+            this.Recepies.push(data.data() as object);
+            })
+          })
         break;
       }
       case "Fleisch": {
-        this.database.collection('RecepieModul').ref.where('categorie', '==', this.chosenCategorie).get()
-        .then((querySnapshot) => {
-           querySnapshot.forEach( data => {
-            console.log(data.data() as object);
-           });
-        });
+        this.recepieService.getFleisch().get().then((querySnapshot) =>{
+          querySnapshot.forEach(data => {
+            this.Recepies.push(data.data() as object);
+            })
+          })
         break;
       }
       case "Fisch": {
-        this.database.collection('RecepieModul').ref.where('categorie', '==', this.chosenCategorie).get()
-        .then((querySnapshot) => {
-           querySnapshot.forEach( data => {
-            console.log(data.data() as object);
-           });
-        });
+        this.recepieService.getFisch().get().then((querySnapshot) =>{
+          querySnapshot.forEach(data => {
+            this.Recepies.push(data.data() as object);
+            })
+          })
         break;
       }
       case "Suppe": {
-        this.database.collection('RecepieModul').ref.where('categorie', '==', this.chosenCategorie).get()
-        .then((querySnapshot) => {
-           querySnapshot.forEach( data => {
-            console.log(data.data() as object);
-           });
-        });
+        this.recepieService.getSuppe().get().then((querySnapshot) =>{
+          querySnapshot.forEach(data => {
+            this.Recepies.push(data.data() as object);
+            })
+          })
         break;
       }
       case "Salat": {
-        this.database.collection('RecepieModul').ref.where('categorie', '==', this.chosenCategorie).get()
-        .then((querySnapshot) => {
-           querySnapshot.forEach( data => {
-            console.log(data.data() as object);
-           });
-        });
+        this.recepieService.getSalat().get().then((querySnapshot) =>{
+          querySnapshot.forEach(data => {
+            this.Recepies.push(data.data() as object);
+            })
+          })
         break;
       }
       case "Vorspeise": {
-        this.database.collection('RecepieModul').ref.where('categorie', '==', this.chosenCategorie).get()
-        .then((querySnapshot) => {
-           querySnapshot.forEach( data => {
-            console.log(data.data() as object);
-           });
-        });
+        this.recepieService.getVorspeise().get().then((querySnapshot) =>{
+          querySnapshot.forEach(data => {
+            this.Recepies.push(data.data() as object);
+            })
+          })
         break;
       }
       case "Nachspeise": {
-        this.database.collection('RecepieModul').ref.where('categorie', '==', this.chosenCategorie).get()
-        .then((querySnapshot) => {
-           querySnapshot.forEach( data => {
-            console.log(data.data() as object);
-           });
-        });
+        this.recepieService.getNachspeise().get().then((querySnapshot) =>{
+          querySnapshot.forEach(data => {
+            this.Recepies.push(data.data() as object);
+            })
+          })
         break;
       }
     }
@@ -155,39 +144,35 @@ export class RecepieComponent implements OnInit {
   getDiet(){
     switch(this.chosenDiet){
       case "normal": {
-        this.database.collection('RecepieModul').ref.where('categorie', '==', this.chosenDiet).get()
-        .then((querySnapshot) => {
-           querySnapshot.forEach( data => {
-            console.log(data.data() as object);
-           });
-        });
+        this.recepieService.getNormal().get().then((querySnapshot) =>{
+          querySnapshot.forEach(data => {
+            this.Recepies.push(data.data() as object);
+            })
+          })
         break;
       }
       case "vegetarisch": {
-        this.database.collection('RecepieModul').ref.where('categorie', '==', this.chosenDiet).get()
-        .then((querySnapshot) => {
-           querySnapshot.forEach( data => {
-            console.log(data.data() as object);
-           });
-        });
+        this.recepieService.getVegetarisch().get().then((querySnapshot) =>{
+          querySnapshot.forEach(data => {
+            this.Recepies.push(data.data() as object);
+            })
+          })
         break;
       }
       case "vegan": {
-        this.database.collection('RecepieModul').ref.where('categorie', '==', this.chosenDiet).get()
-        .then((querySnapshot) => {
-           querySnapshot.forEach( data => {
-            console.log(data.data() as object);
-           });
-        });
+        this.recepieService.getvegan().get().then((querySnapshot) =>{
+          querySnapshot.forEach(data => {
+            this.Recepies.push(data.data() as object);
+            })
+          })
         break;
       }
       case "low carb": {
-        this.database.collection('RecepieModul').ref.where('categorie', '==', this.chosenDiet).get()
-        .then((querySnapshot) => {
-           querySnapshot.forEach( data => {
-            console.log(data.data() as object);
-           });
-        });
+        this.recepieService.getlowcarb().get().then((querySnapshot) =>{
+          querySnapshot.forEach(data => {
+            this.Recepies.push(data.data() as object);
+            })
+          })
         break;
       }
     }
@@ -196,37 +181,30 @@ export class RecepieComponent implements OnInit {
   getDifficulty(){
     switch(this.chosenDifficulty){
       case "leicht": {
-        this.database.collection('RecepieModul').ref.where('categorie', '==', this.chosenDifficulty).get()
-        .then((querySnapshot) => {
-           querySnapshot.forEach( data => {
-            console.log(data.data() as object);
-           });
-        });
+        this.recepieService.getleicht().get().then((querySnapshot) =>{
+          querySnapshot.forEach(data => {
+            this.Recepies.push(data.data() as object);
+            })
+          })
         break;
       }
       case "mittel": {
-        this.database.collection('RecepieModul').ref.where('categorie', '==', this.chosenDifficulty).get()
-        .then((querySnapshot) => {
-           querySnapshot.forEach( data => {
-            console.log(data.data() as object);
-           });
-        });
+        this.recepieService.getmittel().get().then((querySnapshot) =>{
+          querySnapshot.forEach(data => {
+            this.Recepies.push(data.data() as object);
+            })
+          })
         break;
       }
       case "schwer": {
-        this.database.collection('RecepieModul').ref.where('categorie', '==', this.chosenDifficulty).get()
-        .then((querySnapshot) => {
-           querySnapshot.forEach( data => {
-            console.log(data.data() as object);
-           });
-        });
+        this.recepieService.getschwer().get().then((querySnapshot) =>{
+          querySnapshot.forEach(data => {
+            this.Recepies.push(data.data() as object);
+            })
+          })
         break;
       }
     }
-  }
-
-  getAll(){
-    this.ngOnInit();
   }
 
   removeRecepie = recepie => this.recepieService.deleteRecepie(recepie);
