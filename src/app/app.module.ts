@@ -29,6 +29,7 @@ import { EditRecepieComponent } from './edit-recepie/edit-recepie.component';
 import { ProfilComponent } from './profil/profil.component';
 import { HaushaltComponent } from './haushalt/haushalt.component';
 import { NewNameComponent } from './new-name/new-name.component';
+import { Globals } from './global';
 
 
 @NgModule({

@@ -4,6 +4,7 @@ import { AngularFirestore, AngularFirestoreDocument} from '@angular/fire/firesto
 import { Router } from '@angular/router';
 import { auth } from 'firebase/firebase-auth';
 import { hasUncaughtExceptionCaptureCallback } from 'process';
+import { Globals } from '../global';
 import { User } from '../shared/services/user';
 
 @Injectable({
