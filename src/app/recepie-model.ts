@@ -1,4 +1,5 @@
 export interface RecepieModel {
+  id?: string;
   recepietitle?: string;
   picture?: 'images/jpeg';
   nutritionpicture?: string;
@@ -11,4 +12,5 @@ export interface RecepieModel {
   nutrition?: string;
   time?: string;
   difficulty?: string;
+  favorit: boolean;
 }

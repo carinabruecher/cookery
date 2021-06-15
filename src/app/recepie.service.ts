@@ -30,4 +30,21 @@ export class RecepieService {
       .doc(recepie.id)
       .delete();
   }
+
+  updateRecepie(recepie: RecepieModel, id) {
+    return this.angularFirestore
+      .collection('RecepieModel')
+      .doc(id)
+      .update({
+        recepietitle: recepie.recepietitle,
+        nutrition: recepie.nutrition,
+        categorie: recepie.categorie,
+        diet: recepie.diet,
+        ingredients: recepie.ingredients,
+        preparation: recepie.preparation,
+        time: recepie.time,
+        difficulty: recepie.difficulty,
+        favorit: recepie.favorit
+      });
+  }
 }
