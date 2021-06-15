@@ -9,6 +9,7 @@ $blue: #77B5E3;
 $schriftfarbe: #3d3d3d;
 $gray: #f3f2f2;
 $violet: #60339F;
+$red: #D54B4B;
 
 
 /* Hover */
@@ -238,8 +239,8 @@ header{
   color: white;
 }
 .btn-add {
-  position: absolute;
-  bottom: 10px;
+  position: fixed;
+  bottom: 80px;
   right: 20px;
   padding: 0.5rem 0.6rem !important;     // das padding von .btn überschreiben, damit es ein schöner runder Button ist
 }
@@ -286,6 +287,7 @@ header{
 .btn.btn-filter {
   background-color: $gray;
   border: 1px solid $gray;
+  margin-bottom: 5px;
 }
 
 
@@ -293,6 +295,8 @@ header{
   margin-top: 60px;
   text-align: left;
 }
+
+
 
 /* dropdown menu hintergrundfarbe */
 option {
@@ -437,15 +441,71 @@ input.EK-item-number, input.EK-item-number:focus {
 
 
 
+/* ------------ P R O F I L ------------ */
+
+
+.leftbounded {
+  text-align: left;
+}
+
+
+
+.photo {
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  height: 150px;
+  min-height: 150px;
+  max-height: 150px;
+  background-color: $violet;
+  border-radius: 100px;
+  margin: auto;
+  color: white;
+  padding-top: 20%;
+}
+.kreis {
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  background-color: $violet;
+  border-radius: 100px;
+  color: white;
+  margin-right: 5px;
+}
+.warning-clr {
+  color: $red;
+}
+
+
+
+.btn.btn-warning {
+  background-color: $red;
+  color: white;
+}
+.btn.btn-warning:hover {
+  background-color: #000;
+  color: white;
+}
+.float-right {
+  float:right;
+}
+
+
+
+
 /* ------------------------- N A V B A R ------------------------- */
 
 .cookery-navbar {
-  position: fixed;
+  position: sticky;
   bottom:0;
   border-top: 3px solid $orange;
   width:100%;
   max-width: 414px;
   margin: auto;
+  margin-top: 200px;
   text-align: center;
   background-color: white;
 }
@@ -542,63 +602,7 @@ $d-background-color: #0D0D0D;
 
 
 
-/* ------------ P R O F I L ------------ */
 
-$red: #D54B4B;
-
-
-.leftbounded {
-  text-align: left;
-}
-
-/* das muss nach oben bei F I L T E R U N G hin */
-.btn.btn-filter {
-  margin-bottom: 5px;
-}
-/* ENDE */
-
-.photo {
-  width: 150px;
-  min-width: 150px;
-  max-width: 150px;
-  height: 150px;
-  min-height: 150px;
-  max-height: 150px;
-  background-color: $violet;
-  border-radius: 100px;
-  margin: auto;
-  color: white;
-  padding-top: 20%;
-}
-.kreis {
-  width: 40px;
-  min-width: 40px;
-  max-width: 40px;
-  height: 40px;
-  min-height: 40px;
-  max-height: 40px;
-  background-color: $violet;
-  border-radius: 100px;
-  color: white;
-  margin-right: 5px;
-}
-.warning-clr {
-  color: $red;
-}
-
-
-
-.btn.btn-warning {
-  background-color: $red;
-  color: white;
-}
-.btn.btn-warning:hover {
-  background-color: #000;
-  color: white;
-}
-.float-right {
-  float:right;
-}
 
 
 
