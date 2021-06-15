@@ -14,6 +14,9 @@ import { PasswordResetComponent } from './password-reset/password-reset.componen
 import { UserManagementComponent } from './user-management/user-management.component';
 import { VerifyMailComponent} from './verify-mail/verify-mail.component';
 import { EditRecepieComponent } from './edit-recepie/edit-recepie.component';
+import { ProfilComponent } from './profil/profil.component';
+import { HaushaltComponent } from './haushalt/haushalt.component';
+import { NewNameComponent } from './new-name/new-name.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -28,7 +31,10 @@ const routes: Routes = [
   { path: 'userMgmt', component: UserManagementComponent},
   { path: 'verifyMail', component: VerifyMailComponent},
   { path: 'add-new-recepie', component: AddNewRecepieComponent},
-  { path: 'edit-recepie/:id', component: EditRecepieComponent}
+  { path: 'edit-recepie', component: EditRecepieComponent},
+  { path: 'profile', component: ProfilComponent, canActivate: [AuthGuard]},
+  { path: 'haushalt', component: HaushaltComponent, canActivate: [AuthGuard]},
+  { path: 'name-ändern', component: NewNameComponent}
 ];
 
 @NgModule({

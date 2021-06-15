@@ -26,7 +26,9 @@ import { VerifyMailComponent } from './verify-mail/verify-mail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddNewRecepieComponent } from './add-new-recepie/add-new-recepie.component';
 import { EditRecepieComponent } from './edit-recepie/edit-recepie.component';
-import { Globals } from './global';
+import { ProfilComponent } from './profil/profil.component';
+import { HaushaltComponent } from './haushalt/haushalt.component';
+import { NewNameComponent } from './new-name/new-name.component';
 
 
 @NgModule({
@@ -42,7 +44,10 @@ import { Globals } from './global';
     UserManagementComponent,
     VerifyMailComponent,
     AddNewRecepieComponent,
-    EditRecepieComponent
+    EditRecepieComponent,
+    ProfilComponent,
+    HaushaltComponent,
+    NewNameComponent
   ],
   imports: [
     BrowserModule,

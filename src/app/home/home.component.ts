@@ -16,7 +16,4 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toLogout(){
-    return this.firebaseService.logout();
-   }
 }
