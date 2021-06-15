@@ -26,6 +26,7 @@ import { VerifyMailComponent } from './verify-mail/verify-mail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddNewRecepieComponent } from './add-new-recepie/add-new-recepie.component';
 import { EditRecepieComponent } from './edit-recepie/edit-recepie.component';
+import { Globals } from './global';
 
 
 @NgModule({
@@ -62,7 +63,7 @@ import { EditRecepieComponent } from './edit-recepie/edit-recepie.component';
 
 
   ],
-  providers: [FirebaseService],
+  providers: [FirebaseService, Globals],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
