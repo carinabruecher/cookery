@@ -210,6 +210,4 @@ export class RecepieComponent implements OnInit {
       }
     }
   }
-
-  removeRecepie = recepie => this.recepieService.deleteRecepie(recepie);
 }
