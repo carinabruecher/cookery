@@ -510,6 +510,29 @@ input.EK-item-number, input.EK-item-number:focus {
   background-color: white;
 }
 
+.cookery-navbar-list {
+  position: sticky;
+  bottom:0;
+  border-top: 3px solid $green;
+  width:100%;
+  max-width: 414px;
+  margin: auto;
+  margin-top: 200px;
+  text-align: center;
+  background-color: white;
+}
+
+.cookery-navbar-plan {
+  position: sticky;
+  bottom:0;
+  border-top: 3px solid $blue;
+  width:100%;
+  max-width: 414px;
+  margin: auto;
+  margin-top: 200px;
+  text-align: center;
+  background-color: white;
+}
 
 .material-icons.md-36{
   font-size: 36px;
