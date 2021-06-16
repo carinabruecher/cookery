@@ -39,4 +39,9 @@ export class RecepieService {
       .doc(recepie.id)
       .delete();
   }
+
+  getFav(){
+    return this.angularFirestore.collection('RecepieModel')
+    .ref.where('favorit', '==', true)
+  }
 }

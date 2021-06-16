@@ -14,7 +14,7 @@
 <a href="" class="btn btn-lg" role="button" aria-disabled="true">
   <span (click)="getAll()" class="material-icons"> menu_book </span> Alle</a>
 
-<a href="" class="btn btn-lg" role="button" aria-disabled="true">
+<a href="" class="btn btn-lg" role="button" aria-disabled="true" (click)="getFav()">
   <span class="material-icons"> favorite_border </span> Favoriten</a>
 
 <button class="btn btn-filter btn-lg" role="button" aria-disabled="true">
@@ -87,7 +87,7 @@
     <th scope="row">{{ i + 1 }}</th>
     <td>{{ recepie.recepietitle }}</td>
     <td class="displayNone icon-box icon-box-fav" width="5%">
-      <button (click)="setFavorit(recepie)">
+      <button (click)="setFav(recepie, recepie.id)">
         <span class="material-icons"> favorite_border </span>
       </button>
     </td>
