@@ -1,24 +1,55 @@
-<div class class="main-wrapper">
+<!DOCTYPE html>
+<html>
+<head>
 
-  <h2>Deine Einkaufslisten:</h2>
+<link rel="stylesheet" type="text/css" href="list.component.scss">
 
-  <!-- <p>Du hast noch keine Einkaufslisten.</p> -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
 
-  <a href=""><div class="box-discounter">
-    REWE
-  </div></a>
-  <a href=""><div class="box-discounter">
-    Aldi
-  </div></a>
-  <a href=""><div class="box-discounter">
-    E-Center
-  </div></a>
+</head>
+
+<body>
+
+  <div class="main" ng-app="myShoppingList" ng-controller="myCtrl">
+    <h1>ToDo List App</h1>
+    <div class="search">
+      <input type="text" placeholder="Add ToDo" ng-model="addMe">
+      <span ng-click="addItem()"><i class="fas fa-plus"></i></span>
+
+    </div>
+
+    <ul>
+      <li ng-repeat="x in products">x<i ng-click="removeItem($index)" class="fas fa-trash-alt"></i></li>
+    </ul>
+    <p>errortext</p>
+
+  </div>
+
+  <script type="text/javascript">
+  
+    var app = angular.module("myShoppingList", []);
+    app.controller("myCtrl", function($scope){
+      $scope.products = ["Milke", "Bread", "Eggs"];
+      $scope.addItem = function(){
+        $scope.errortext = "";
+        if (!$scope.addMe) {return;}
+        if ($scope.products.indexOf($scope.addMe) == -1) {
+            $scope.products.push($scope.addMe);
+          }
+      else{
+        $scope.errortext = "This item is already in your List.";
+      }
+    }
+    $scope.removeItem = function(x){
+      $scope.products.splice(x,1);
+    }
 
 
+    });
+  
+  </script>
 
-  <br><br>
-  <p>
-    <a href="#" class="btn btn-einkauf btn-lg btn-add" role="button" aria-disabled="true"><span class="material-icons"> add </span></a>
-  </p>
 
-</div>
+</body>
+</html>
