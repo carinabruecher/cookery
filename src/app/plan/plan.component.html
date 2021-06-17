@@ -3,172 +3,179 @@
     <h1>Essensplan</h1>
   </div>
 
-</div>
 
-
-<div class class="main-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <h2>Mai 2021</h2>
-      </div>
-      <div class="col-sm">
-        <h2>KW14</h2>
-      </div>
-      <div class="col-sm">
-        <span class="material-icons md-26"> file_upload </span>
-        <!-- <span class="material-icons-outlined"> file_upload </span> -->
-      </div>
-    </div>
-  </div>
-
-  <hr>
-
-  <form action="/action_page.php">
-
-    <div class="container BoxVonTag">
+  <form action="/action_page.php" [formGroup]="editForm" (ngSubmit)='onSubmit()' novalidate>
+    <div class="container BoxVonTag form-field">
       <div class="row">
         <div class="col-sm-2 rightbounded">Mo</div>
         <div class="col-sm-8 leftbounded">
-          <label for="addLunch-1">Mittagessen hinzufügen</label>
+          <input type="text" class="form-control" placeholder="Mittagessen hinzufügen" formControlName="M1">
         </div>
         <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-2 rightbounded">7.</div>
+        <div class="col-sm-2 rightbounded"></div>
         <div class="col-sm-8 leftbounded">
-          <label for="addDinner-1">Abendessen hinzufügen</label>
+          <input type="text" class="form-control" placeholder="Abendessen hinzufügen" formControlName="A1" >
         </div>
         <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
     </div>
 
-    <div class="container BoxVonTag">
+    <div class="container BoxVonTag form-field">
       <div class="row">
         <div class="col-sm-2 rightbounded">Di</div>
         <div class="col-sm-8 leftbounded">
-          <label for="addLunch-2">Mittagessen hinzufügen</label>
+          <input type="text" class="form-control" placeholder="Mittagessen hinzufügen" formControlName="M2">
         </div>
         <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-2 rightbounded">8.</div>
+        <div class="col-sm-2 rightbounded"></div>
         <div class="col-sm-8 leftbounded">
-          <label for="addDinner-2">Abendessen hinzufügen</label>
+          <input type="text" class="form-control" placeholder="Abendessen hinzufügen" formControlName="A2">
         </div>
         <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
     </div>
 
-    <div class="container BoxVonTag">
+    <div class="container BoxVonTag form-field">
       <div class="row">
         <div class="col-sm-2 rightbounded">Mi</div>
         <div class="col-sm-8 leftbounded">
-          <label for="addLunch-3">Mittagessen hinzufügen</label>
+          <input type="text" class="form-control" placeholder="Mittagessen hinzufügen" formControlName="M3" >
         </div>
         <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-2 rightbounded">9.</div>
+        <div class="col-sm-2 rightbounded"></div>
         <div class="col-sm-8 leftbounded">
-          <label for="addDinner-3">Abendessen hinzufügen</label>
+          <input type="text" class="form-control" placeholder="Abendessen hinzufügen" formControlName="A3" >
         </div>
         <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
     </div>
 
-    <div class="container BoxVonTag">
+    <div class="container BoxVonTag form-field">
       <div class="row">
         <div class="col-sm-2 rightbounded">Do</div>
         <div class="col-sm-8 leftbounded">
-          <label for="addLunch-4">Mittagessen hinzufügen</label>
+          <input type="text" class="form-control" placeholder="Mittagessen hinzufügen" formControlName="M4" >
         </div>
         <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-2 rightbounded">10.</div>
+        <div class="col-sm-2 rightbounded"></div>
         <div class="col-sm-8 leftbounded">
-          <label for="addDinner-4">Abendessen hinzufügen</label>
+          <input type="text" class="form-control" placeholder="Abendessen hinzufügen" formControlName="A4" >
         </div>
         <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
     </div>
 
-    <div class="container BoxVonTag">
+    <div class="container BoxVonTag form-field">
       <div class="row">
         <div class="col-sm-2 rightbounded">Fr</div>
         <div class="col-sm-8 leftbounded">
-          <label for="addLunch-5">Mittagessen hinzufügen</label>
+          <input type="text" class="form-control" placeholder="Mittagessen hinzufügen" formControlName="M5" >
         </div>
         <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-2 rightbounded">11.</div>
+        <div class="col-sm-2 rightbounded"></div>
         <div class="col-sm-8 leftbounded">
-          <label for="addDinner-5">Abendessen hinzufügen</label>
+          <input type="text" class="form-control" placeholder="Abendessen hinzufügen" formControlName="A5" >
         </div>
         <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
     </div>
 
-    <div class="container BoxVonTag">
+    <div class="container BoxVonTag form-field">
       <div class="row">
         <div class="col-sm-2 rightbounded">Sa</div>
         <div class="col-sm-8 leftbounded">
-          <label for="addLunch-6">Mittagessen hinzufügen</label>
+          <input type="text" class="form-control" placeholder="Mittagessen hinzufügen" formControlName="M6" >
         </div>
         <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-2 rightbounded">12.</div>
+        <div class="col-sm-2 rightbounded"></div>
         <div class="col-sm-8 leftbounded">
-          <label for="addDinner-6">Abendessen hinzufügen</label>
+          <input type="text" class="form-control" placeholder="Abendessen hinzufügen" formControlName="A6">
         </div>
         <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
     </div>
 
-    <div class="container BoxVonTag">
+    <div class="container BoxVonTag form-field">
       <div class="row">
         <div class="col-sm-2 rightbounded">So</div>
         <div class="col-sm-8 leftbounded">
-          <label for="addLunch-7">Mittagessen hinzufügen</label>
+          <input type="text" class="form-control" placeholder="Mittagessen hinzufügen" formControlName="M7">
         </div>
         <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-2 rightbounded">13.</div>
+        <div class="col-sm-2 rightbounded"></div>
         <div class="col-sm-8 leftbounded">
-          <label for="addDinner-7">Abendessen hinzufügen</label>
+          <input type="text" class="form-control" placeholder="Abendessen hinzufügen" formControlName="A7">
         </div>
         <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
     </div>
