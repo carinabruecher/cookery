@@ -32,7 +32,7 @@ const routes: Routes = [
   { path: 'userMgmt', component: UserManagementComponent},
   { path: 'verifyMail', component: VerifyMailComponent},
   { path: 'add-new-recepie', component: AddNewRecepieComponent},
-  { path: 'edit-recepie', component: EditRecepieComponent},
+  { path: 'edit-recepie/:id', component: EditRecepieComponent},
   { path: 'profile', component: ProfilComponent, canActivate: [AuthGuard]},
   { path: 'haushalt', component: HaushaltComponent, canActivate: [AuthGuard]},
   { path: 'name-ändern', component: NewNameComponent},
