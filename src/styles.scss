@@ -623,13 +623,14 @@ $d-background-color: #0D0D0D;
 /* REZEPT SEITE */
 .displayNone.icon-box.icon-box-edit button {
   background-color: transparent;
-  border: 0px solid #000;
+  border: 0px solid #f3f2f2;
 }
 
 
 /* REZEPT BEARBEITEN */
 .custom-select.form-control {
   background-color: transparent !important;
+  font-family: "Roboto", Arial, sans-serif;
 }
 
 
@@ -642,7 +643,15 @@ $d-background-color: #0D0D0D;
 
 
 
+.padding-top-8 {
+  padding-top: 8px;
+}
+.padding-top-4 {
+  padding-top: 4px;
+}
 
-
+.custom-select.form-control.plan {
+  background-color: #f8f8f8 !important;
+}
 
 
