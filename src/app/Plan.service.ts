@@ -33,7 +33,7 @@ export class PlanServices {
 
   updatePlpan(plan: PlanModel, id) {
     return this.angularFirestore
-      .collection('Todo')
+      .collection('Plan')
       .doc(id)
       .update({
         A1: plan.A1,
