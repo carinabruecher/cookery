@@ -324,7 +324,7 @@ td.icon-box-edit {
   background-color: #8b8585 !important;
 }
 td.icon-box-del {
-  background-color: #d54b4b !important;
+  background-color: $red !important;
 }
 td.icon-box a {
   color: $schriftfarbe;
@@ -620,11 +620,25 @@ $d-background-color: #0D0D0D;
 
 
 
+/* REZEPT SEITE */
+.displayNone.icon-box.icon-box-edit button {
+  background-color: transparent;
+  border: 0px solid #000;
+}
 
 
+/* REZEPT BEARBEITEN */
+.custom-select.form-control {
+  background-color: transparent !important;
+}
 
 
-
+.neuneuneu {
+  background-color: #000;
+}
+.neuneuneu2 {
+  background-color: #000;
+}
 
 
 
