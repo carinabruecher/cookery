@@ -1,4 +1,8 @@
 <div class class="main-wrapper">
+  <div class="ueberschrift bg-orange">
+    <h1>Rezepte</h1>
+  </div>
+
   <form [formGroup]="editForm" (ngSubmit)="onSubmit()" novalidate>
     <div class="container">
       <div class="row head-zeile">
@@ -108,3 +112,24 @@
   </form>
 </div>
 
+<div class="cookery-navbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <a href="#" routerLink="/home"><span class="material-icons md-36 icon-dark form-dark"> home </span></a>
+      </div>
+      <div class="col-sm bg-orange">
+        <a href="#" routerLink="/rezept"><span class="material-icons md-36 icon-white form-dark"> menu_book </span></a>
+      </div>
+      <div class="col-sm">
+        <a href="#" routerLink="/list"><span class="material-icons md-36 icon-dark form-dark"> checklist </span></a>
+      </div>
+      <div class="col-sm">
+        <a href="#" routerLink="/plan"><span class="material-icons md-36 icon-dark form-dark"> date_range </span></a>
+      </div>
+      <div class="col-sm">
+        <a href="" routerLink="/profile"><span class="material-icons md-36 icon-dark form-dark"> account_circle </span></a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -510,6 +510,16 @@ input.EK-item-number, input.EK-item-number:focus {
   background-color: white;
 }
 
+.cookery-navbar.list {
+  border-top: 3px solid $green;
+}
+.cookery-navbar.plan {
+  border-top: 3px solid $blue;
+}
+.cookery-navbar.profile {
+  border-top: 3px solid $violet;
+}
+
 
 .material-icons.md-36{
   font-size: 36px;
@@ -525,7 +535,15 @@ input.EK-item-number, input.EK-item-number:focus {
   padding: 10px 0px;
 }
 
+/* Überschriften */
 
+.ueberschrift{
+  text-align: center;
+  h1{
+    color: white;
+    font-family: 'Handlee', cursive;
+  }
+}
 
 
 
