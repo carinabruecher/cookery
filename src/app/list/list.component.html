@@ -1,29 +1,18 @@
-<div class class="main-wrapper">
-
-  <div class="ueberschrift bg-green">
-    <h1>Einkaufslisten</h1>
-  </div>
-
-  <!-- <p>Du hast noch keine Einkaufslisten.</p> -->
-
-  <a href=""><div class="box-discounter">
-    REWE
-  </div></a>
-  <a href=""><div class="box-discounter">
-    Aldi
-  </div></a>
-  <a href=""><div class="box-discounter">
-    E-Center
-  </div></a>
-
-
-
-  <br><br>
-  <p>
-    <a href="#" class="btn btn-einkauf btn-lg btn-add" role="button" aria-disabled="true"><span class="material-icons"> add </span></a>
-  </p>
-
+<div class="form-field">
+  <input type="text" class="form-control rezeptinhalt rezepttitel" placeholder="Todo" [(ngModel)]="item.titel">
 </div>
+<button class="btn" (click)="save()" style="padding-top:0 !important; color: #FFAA00">
+  <span class="material-icons form-dark" style="float: right"> done </span>
+</button>
+
+<table class="table rezeptuebersicht">
+  <tbody>
+  <tr *ngFor="let todo of todo; let i = index">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ todo.titel }}</td>
+  </tr>
+  </tbody>
+</table>
 
 <div class="cookery-navbar list">
   <div class="container">

@@ -30,7 +30,7 @@ import { ProfilComponent } from './profil/profil.component';
 import { HaushaltComponent } from './haushalt/haushalt.component';
 import { NewNameComponent } from './new-name/new-name.component';
 import { Globals } from './global';
-
+import { ListOverviewComponent } from './list-overview/list-overview.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,8 @@ import { Globals } from './global';
     EditRecepieComponent,
     ProfilComponent,
     HaushaltComponent,
-    NewNameComponent
+    NewNameComponent,
+    ListOverviewComponent,
   ],
   imports: [
     BrowserModule,

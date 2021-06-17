@@ -52,8 +52,7 @@ export class RecepieService {
         ingredients: recepie.ingredients,
         preparation: recepie.preparation,
         time: recepie.time,
-        difficulty: recepie.difficulty,
-        favorit: recepie.favorit
+        difficulty: recepie.difficulty
       });
   }
   get30(){

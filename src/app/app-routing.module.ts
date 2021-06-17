@@ -17,6 +17,7 @@ import { EditRecepieComponent } from './edit-recepie/edit-recepie.component';
 import { ProfilComponent } from './profil/profil.component';
 import { HaushaltComponent } from './haushalt/haushalt.component';
 import { NewNameComponent } from './new-name/new-name.component';
+import { ListOverviewComponent } from './list-overview/list-overview.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -34,7 +35,8 @@ const routes: Routes = [
   { path: 'edit-recepie', component: EditRecepieComponent},
   { path: 'profile', component: ProfilComponent, canActivate: [AuthGuard]},
   { path: 'haushalt', component: HaushaltComponent, canActivate: [AuthGuard]},
-  { path: 'name-ändern', component: NewNameComponent}
+  { path: 'name-ändern', component: NewNameComponent},
+  { path: 'list-overview', component: ListOverviewComponent}
 ];
 
 @NgModule({
