@@ -1,9 +1,6 @@
 <div class="form-field">
   <input type="text" class="form-control rezeptinhalt rezepttitel" placeholder="Todo" [(ngModel)]="item.titel">
 </div>
-<div class="form-field">
-  <input type="text" class="form-control rezeptinhalt rezepttitel" placeholder="Rezepttitel" [(ngModel)]="item.description">
-</div>
 <button class="btn" (click)="save()" style="padding-top:0 !important; color: #FFAA00">
   <span class="material-icons form-dark" style="float: right"> done </span>
 </button>
@@ -13,8 +10,6 @@
   <tr *ngFor="let todo of todo; let i = index">
     <th scope="row">{{ i + 1 }}</th>
     <td>{{ todo.titel }}</td>
-    <td>
-      <button routerLink="/list-overview/{{todo.id}}"> <span class="material-icons"> liste</span> </button></td>
   </tr>
   </tbody>
 </table>

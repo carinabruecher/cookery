@@ -18,7 +18,7 @@ export class ListComponent implements OnInit {
 
   constructor(private todoService: ToDolServices,
     private afs: AngularFirestore) {
-      this.ToDolCollection = afs.collection<ToDolModel>('ToDO');
+      this.ToDolCollection = afs.collection<ToDolModel>('ToDo');
      }
 
   @Input() titel:string; description:String;
@@ -45,6 +45,7 @@ export class ListComponent implements OnInit {
   public save(): void {
     this.ToDolCollection.add(this.item);
     this.item = {};
+
   }
 
 }

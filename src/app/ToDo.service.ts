@@ -37,7 +37,6 @@ export class ToDolServices {
       .doc(id)
       .update({
         titel: todo.titel,
-        description: todo.description
       });
   }
 }
