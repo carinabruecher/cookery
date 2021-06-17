@@ -25,8 +25,7 @@ export class RecepieComponent implements OnInit {
   constructor(private recepieService: RecepieService,
     private database: AngularFirestore) { }
 
-  @Input() recepietitle: string; picture: string; categorie: string; diet: string; difficulty: string; ingredients: string; nutrition: string; preparation: string; time: string;
-  showModalBox: boolean;
+  @Input() recepietitle: string; picture: string; categorie: string; diet: string; difficulty: string; ingredients: string; nutrition: string; preparation: string; time: string; favorit: boolean;
   ngOnInit() {
     this.recepieService.getRecepieList().subscribe(res => {
       this.Recepies = res.map( e => {
@@ -46,6 +45,9 @@ export class RecepieComponent implements OnInit {
 
   removeRecepie = recepie => this.recepieService.deleteRecepie(recepie);
 
+  setFav(recepie, id){
+    this.recepieService.setFavorit(recepie, id)
+  }
 
   getTime(){
     switch(this.chosenTime){
@@ -210,4 +212,18 @@ export class RecepieComponent implements OnInit {
       }
     }
   }
+
+  getFav(){
+    this.recepieService.getFav().get().then((querySnapshot) =>{
+      querySnapshot.forEach(data => {
+        this.Recepies.push(data.data() as object);
+      })
+    })
+  }
+
+  getAll(){
+    this.ngOnInit();
+  }
+
+
 }

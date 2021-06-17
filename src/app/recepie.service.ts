@@ -11,6 +11,15 @@ export class RecepieService {
   constructor(private angularFirestore: AngularFirestore) {
   }
 
+  setFavorit(recepie: RecepieModel, id) {
+    return this.angularFirestore
+      .collection('RecepieModel')
+      .doc(id)
+      .update({
+        favorit: !recepie.favorit
+      });
+  }
+
   getRecepieDoc(id) {
     return this.angularFirestore
       .collection('RecepieModel')
@@ -137,4 +146,8 @@ export class RecepieService {
     .ref.where('difficulty', '==', 'schwer')
   }
 
+  getFav(){
+    return this.angularFirestore.collection('RecepieModel')
+    .ref.where('favorit', '==', true)
+  }
 }
