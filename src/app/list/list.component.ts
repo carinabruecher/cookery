@@ -48,4 +48,6 @@ export class ListComponent implements OnInit {
 
   }
 
+  removeListe = todo => this.todoService.deleteToDo(todo);
+
 }

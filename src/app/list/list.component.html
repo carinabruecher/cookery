@@ -26,7 +26,7 @@
       <tbody>
       <tr *ngFor="let todo of todo; let i = index">
         <!-- <th scope="row">{{ i + 1 }}</th> -->
-        <th scope="row"><input type="checkbox" id="todo-title1" name="todo-title1" value="Lebensmittel"></th>
+        <th scope="row"><input type="checkbox" id="todo-title1" name="todo-title1" value="Lebensmittel" (click)="removeListe(todo)"></th>
         <td><label for="todo-title1"> {{ todo.titel }}</label></td>
         <!-- <td width="5%"><input type="number" class="EK-item-number" id="quantity" name="quantity" min="1" max="999"></td> -->
       </tr>
