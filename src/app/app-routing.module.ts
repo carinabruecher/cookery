@@ -22,21 +22,21 @@ import { ListOverviewComponent } from './list-overview/list-overview.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   /*{ path: 'home', component: HomeComponent, canActivate: [AuthGuard]},*/
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
-  { path: 'list', component: ListComponent, canActivate: [AuthGuard]},
-  { path: 'plan', component: PlanComponent, canActivate: [AuthGuard]},
-  { path: 'rezept', component: RecepieComponent, canActivate: [AuthGuard]},
+  { path: 'home', component: HomeComponent},
+  { path: 'list', component: ListComponent},
+  { path: 'plan', component: PlanComponent},
+  { path: 'rezept', component: RecepieComponent},
   { path: 'anmelden', component: SignInComponent},
   { path: 'regestrieren', component: SignUpComponent},
   { path: 'passwortzurücksetzen', component: PasswordResetComponent},
   { path: 'userMgmt', component: UserManagementComponent},
   { path: 'verifyMail', component: VerifyMailComponent},
-  { path: 'add-new-recepie', component: AddNewRecepieComponent, canActivate: [AuthGuard]},
-  { path: 'edit-recepie/:id', component: EditRecepieComponent, canActivate: [AuthGuard]},
+  { path: 'add-new-recepie', component: AddNewRecepieComponent},
+  { path: 'edit-recepie/:id', component: EditRecepieComponent},
   { path: 'profile', component: ProfilComponent, canActivate: [AuthGuard]},
   { path: 'haushalt', component: HaushaltComponent, canActivate: [AuthGuard]},
-  { path: 'name-ändern', component: NewNameComponent, canActivate: [AuthGuard]},
-  { path: 'list-overview', component: ListOverviewComponent, canActivate: [AuthGuard]}
+  { path: 'name-ändern', component: NewNameComponent},
+  { path: 'list-overview', component: ListOverviewComponent}
 ];
 
 @NgModule({
