@@ -621,7 +621,7 @@ $d-background-color: #0D0D0D;
 
 
 /* REZEPT SEITE */
-.displayNone.icon-box.icon-box-edit button {
+.displayNone.icon-box.icon-box-edit button, .displayNone.icon-box.icon-box-fav button {
   background-color: transparent;
   border: 0px solid #f3f2f2;
 }
