@@ -3,177 +3,187 @@
     <h1>Essensplan</h1>
   </div>
 
-</div>
 
-
-<div class class="main-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <h2>Mai 2021</h2>
-      </div>
-      <div class="col-sm">
-        <h2>KW14</h2>
-      </div>
-      <div class="col-sm">
-        <span class="material-icons md-26"> file_upload </span>
-        <!-- <span class="material-icons-outlined"> file_upload </span> -->
-      </div>
-    </div>
-  </div>
-
-  <hr>
-
-  <form action="/action_page.php">
-
-    <div class="container BoxVonTag">
-      <div class="row">
-        <div class="col-sm-2 rightbounded">Mo</div>
+  <form action="/action_page.php" [formGroup]="editForm" (ngSubmit)='onSubmit()' novalidate>
+    <div class="container BoxVonTag form-field">
+      <div class="row" style="padding-top: 10px; padding-bottom: 5px">
+        <div class="col-sm-2 rightbounded padding-top-8">Mo</div>
         <div class="col-sm-8 leftbounded">
-          <label for="addLunch-1">Mittagessen hinzufügen</label>
+          <input type="text" class="custom-select form-control plan" placeholder="Mittagessen hinzufügen" formControlName="M1">
         </div>
-        <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+        <div class="col-sm-2 displayNone icon-box icon-box-edit padding-top-4">
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-2 rightbounded">7.</div>
+      <div class="row" style="padding-top: 5px; padding-bottom: 10px">
+        <div class="col-sm-2 rightbounded"></div>
         <div class="col-sm-8 leftbounded">
-          <label for="addDinner-1">Abendessen hinzufügen</label>
+          <input type="text" class="custom-select form-control plan" placeholder="Abendessen hinzufügen" formControlName="A1" >
         </div>
-        <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+        <div class="col-sm-2 displayNone icon-box icon-box-edit padding-top-4">
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
     </div>
 
-    <div class="container BoxVonTag">
-      <div class="row">
-        <div class="col-sm-2 rightbounded">Di</div>
+    <div class="container BoxVonTag form-field">
+      <div class="row" style="padding-top: 10px; padding-bottom: 5px">
+        <div class="col-sm-2 rightbounded" style="padding-top: 8px;">Di</div>
         <div class="col-sm-8 leftbounded">
-          <label for="addLunch-2">Mittagessen hinzufügen</label>
+          <input type="text" class="custom-select form-control plan" placeholder="Mittagessen hinzufügen" formControlName="M2">
         </div>
-        <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+        <div class="col-sm-2 displayNone icon-box icon-box-edit padding-top-4">
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-2 rightbounded">8.</div>
+      <div class="row" style="padding-top: 5px; padding-bottom: 10px">
+        <div class="col-sm-2 rightbounded"></div>
         <div class="col-sm-8 leftbounded">
-          <label for="addDinner-2">Abendessen hinzufügen</label>
+          <input type="text" class="custom-select form-control plan" placeholder="Abendessen hinzufügen" formControlName="A2">
         </div>
-        <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
-        </div>
-      </div>
-    </div>
-
-    <div class="container BoxVonTag">
-      <div class="row">
-        <div class="col-sm-2 rightbounded">Mi</div>
-        <div class="col-sm-8 leftbounded">
-          <label for="addLunch-3">Mittagessen hinzufügen</label>
-        </div>
-        <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-2 rightbounded">9.</div>
-        <div class="col-sm-8 leftbounded">
-          <label for="addDinner-3">Abendessen hinzufügen</label>
-        </div>
-        <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+        <div class="col-sm-2 displayNone icon-box icon-box-edit padding-top-4">
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
     </div>
 
-    <div class="container BoxVonTag">
-      <div class="row">
-        <div class="col-sm-2 rightbounded">Do</div>
+    <div class="container BoxVonTag form-field">
+      <div class="row" style="padding-top: 10px; padding-bottom: 5px">
+        <div class="col-sm-2 rightbounded" style="padding-top: 8px;">Mi</div>
         <div class="col-sm-8 leftbounded">
-          <label for="addLunch-4">Mittagessen hinzufügen</label>
+          <input type="text" class="custom-select form-control plan" placeholder="Mittagessen hinzufügen" formControlName="M3" >
         </div>
-        <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+        <div class="col-sm-2 displayNone icon-box icon-box-edit padding-top-4">
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-2 rightbounded">10.</div>
+      <div class="row" style="padding-top: 5px; padding-bottom: 10px">
+        <div class="col-sm-2 rightbounded"></div>
         <div class="col-sm-8 leftbounded">
-          <label for="addDinner-4">Abendessen hinzufügen</label>
+          <input type="text" class="custom-select form-control plan" placeholder="Abendessen hinzufügen" formControlName="A3" >
         </div>
-        <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
-        </div>
-      </div>
-    </div>
-
-    <div class="container BoxVonTag">
-      <div class="row">
-        <div class="col-sm-2 rightbounded">Fr</div>
-        <div class="col-sm-8 leftbounded">
-          <label for="addLunch-5">Mittagessen hinzufügen</label>
-        </div>
-        <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-2 rightbounded">11.</div>
-        <div class="col-sm-8 leftbounded">
-          <label for="addDinner-5">Abendessen hinzufügen</label>
-        </div>
-        <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+        <div class="col-sm-2 displayNone icon-box icon-box-edit padding-top-4">
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
     </div>
 
-    <div class="container BoxVonTag">
-      <div class="row">
-        <div class="col-sm-2 rightbounded">Sa</div>
+    <div class="container BoxVonTag form-field">
+      <div class="row" style="padding-top: 10px; padding-bottom: 5px">
+        <div class="col-sm-2 rightbounded" style="padding-top: 8px;">Do</div>
         <div class="col-sm-8 leftbounded">
-          <label for="addLunch-6">Mittagessen hinzufügen</label>
+          <input type="text" class="custom-select form-control plan" placeholder="Mittagessen hinzufügen" formControlName="M4" >
         </div>
-        <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+        <div class="col-sm-2 displayNone icon-box icon-box-edit padding-top-4">
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-2 rightbounded">12.</div>
+      <div class="row" style="padding-top: 5px; padding-bottom: 10px">
+        <div class="col-sm-2 rightbounded"></div>
         <div class="col-sm-8 leftbounded">
-          <label for="addDinner-6">Abendessen hinzufügen</label>
+          <input type="text" class="custom-select form-control plan" placeholder="Abendessen hinzufügen" formControlName="A4" >
         </div>
-        <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+        <div class="col-sm-2 displayNone icon-box icon-box-edit padding-top-4">
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
     </div>
 
-    <div class="container BoxVonTag">
-      <div class="row">
-        <div class="col-sm-2 rightbounded">So</div>
+    <div class="container BoxVonTag form-field">
+      <div class="row" style="padding-top: 10px; padding-bottom: 5px">
+        <div class="col-sm-2 rightbounded" style="padding-top: 8px;">Fr</div>
         <div class="col-sm-8 leftbounded">
-          <label for="addLunch-7">Mittagessen hinzufügen</label>
+          <input type="text" class="custom-select form-control plan" placeholder="Mittagessen hinzufügen" formControlName="M5" >
         </div>
-        <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+        <div class="col-sm-2 displayNone icon-box icon-box-edit padding-top-4">
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-2 rightbounded">13.</div>
+      <div class="row" style="padding-top: 5px; padding-bottom: 10px">
+        <div class="col-sm-2 rightbounded"></div>
         <div class="col-sm-8 leftbounded">
-          <label for="addDinner-7">Abendessen hinzufügen</label>
+          <input type="text" class="custom-select form-control plan" placeholder="Abendessen hinzufügen" formControlName="A5" >
         </div>
-        <div class="col-sm-2">
-          <span class="material-icons md-20"> edit </span>
+        <div class="col-sm-2 displayNone icon-box icon-box-edit padding-top-4">
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container BoxVonTag form-field">
+      <div class="row" style="padding-top: 10px; padding-bottom: 5px">
+        <div class="col-sm-2 rightbounded" style="padding-top: 8px;">Sa</div>
+        <div class="col-sm-8 leftbounded">
+          <input type="text" class="custom-select form-control plan" placeholder="Mittagessen hinzufügen" formControlName="M6" >
+        </div>
+        <div class="col-sm-2 displayNone icon-box icon-box-edit padding-top-4">
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
+        </div>
+      </div>
+      <div class="row" style="padding-top: 5px; padding-bottom: 10px">
+        <div class="col-sm-2 rightbounded"></div>
+        <div class="col-sm-8 leftbounded">
+          <input type="text" class="custom-select form-control plan" placeholder="Abendessen hinzufügen" formControlName="A6">
+        </div>
+        <div class="col-sm-2 displayNone icon-box icon-box-edit padding-top-4">
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container BoxVonTag form-field">
+      <div class="row" style="padding-top: 10px; padding-bottom: 5px">
+        <div class="col-sm-2 rightbounded" style="padding-top: 8px;">So</div>
+        <div class="col-sm-8 leftbounded">
+          <input type="text" class="custom-select form-control plan" placeholder="Mittagessen hinzufügen" formControlName="M7">
+        </div>
+        <div class="col-sm-2 displayNone icon-box icon-box-edit padding-top-4">
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
+        </div>
+      </div>
+      <div class="row" style="padding-top: 5px; padding-bottom: 10px">
+        <div class="col-sm-2 rightbounded"></div>
+        <div class="col-sm-8 leftbounded">
+          <input type="text" class="custom-select form-control plan" placeholder="Abendessen hinzufügen" formControlName="A7">
+        </div>
+        <div class="col-sm-2 displayNone icon-box icon-box-edit padding-top-4">
+          <button type="submit">
+            <span class="material-icons md-20"> edit </span>
+          </button>
         </div>
       </div>
     </div>
 
   </form>
+
+
+
 
   <div class="cookery-navbar plan">
     <div class="container">
