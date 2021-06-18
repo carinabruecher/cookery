@@ -200,12 +200,12 @@ header{
 .form-control {
   border-radius: 30px;
   font-weight: 300;
-  font-family: 'Roboto Light';
+  font-family: "Roboto", Arial, sans-serif !important;
 }
 
 .btn {
   font-weight: 300;
-  font-family: 'Roboto Light';
+  font-family: "Roboto", Arial, sans-serif !important;
   border-radius: 40px !important;
   padding: 0.5rem 40px !important;
 }
@@ -661,6 +661,11 @@ $d-background-color: #0D0D0D;
 
 .custom-select.form-control.plan {
   background-color: #f8f8f8 !important;
+}
+
+
+textarea, input {
+  font-family: "Roboto", Arial, sans-serif !important;
 }
 
 
