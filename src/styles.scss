@@ -634,12 +634,21 @@ $d-background-color: #0D0D0D;
 }
 
 
-.neuneuneu {
-  background-color: #000;
+/* EINKAUFSLISTE */
+.form-field.no-margin {
+  margin:0;
 }
-.neuneuneu2 {
-  background-color: #000;
+
+.form-control.einkaufsliste {
+  background-color: rgba(255, 255, 255, 0);
+  outline: none;
 }
+.form-control.einkaufsliste:focus {
+  border: 1px solid #ced4da;
+  background-color: transparent;
+  outline: none;
+}
+
 
 
 
