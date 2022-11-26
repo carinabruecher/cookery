@@ -14,13 +14,13 @@
 
   <div>
     <input type="text" class="form-control" #emailSignup placeholder="E-Mail"/><br>
-    <input [(ngModel)]="passwordSignup" #passwordSignupid type="password" id="newPassword" name="newPassword" placeholder="•••••••••" class="form-control">
-    <password-strength-meter [password]="passwordSignup"></password-strength-meter>
+    <!-- <input [(ngModel)]="passwordSignup" #passwordSignupid type="password" id="newPassword" name="newPassword" placeholder="•••••••••" class="form-control">
+    <angular-password-strength-meter [password]="passwordSignup"></angular-password-strength-meter>
     <br><br>
     <input type="checkbox" id="daten"> &nbsp;<label for="daten">Datenschutzrichtlinien</label>
     <br><br>
     <button class="btn btn-primaer btn-lg" (click)="firebaseService.signup(emailSignup.value, passwordSignupid.value)">Registrieren</button>
-    <br><br>
+    <br><br>-->
     <a class="bottomLink" routerLink="/anmelden">Hier geht's zum <u>Login</u></a>
   </div>
 </div>
