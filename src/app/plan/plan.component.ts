@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { PlanModel } from '../Plan-model';
 import { PlanServices } from '../Plan.service';
 import { map } from 'rxjs/operators';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-plan',
@@ -13,12 +13,12 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class PlanComponent implements OnInit {
   planRef: any;
-  public editForm: FormGroup;
+  public editForm: UntypedFormGroup;
 
   constructor(
     private planService: PlanServices,
     private afs: AngularFirestore,
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
   ) {
     this.editForm = this.formBuilder.group({
       A1: [''],

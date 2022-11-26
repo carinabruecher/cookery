@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -13,13 +13,13 @@ import { ToDolServices } from '../ToDo.service';
   styleUrls: ['./list-overview.component.scss']
 })
 export class ListOverviewComponent implements OnInit {
-  public editForm: FormGroup;
+  public editForm: UntypedFormGroup;
   todo: ToDolModel[];
   todoRef: any;
 
   constructor(
     public todoService: ToDolServices,
-    public formBuilder: FormBuilder,
+    public formBuilder: UntypedFormBuilder,
     private act: ActivatedRoute,
 
   ) {

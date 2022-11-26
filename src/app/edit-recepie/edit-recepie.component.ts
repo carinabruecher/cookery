@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RecepieService } from '../recepie.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-recepie',
@@ -9,12 +9,12 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./edit-recepie.component.scss']
 })
 export class EditRecepieComponent implements OnInit {
-  public editForm: FormGroup;
+  public editForm: UntypedFormGroup;
   recepieRef: any;
 
   constructor(
     public recepieService: RecepieService,
-    public formBuilder: FormBuilder,
+    public formBuilder: UntypedFormBuilder,
     private act: ActivatedRoute,
     private router: Router
   ) {
